@@ -255,36 +255,29 @@
 <body>
     <main>
         <!--Container-->
-        <div class="container"
-            style="padding: 30px;margin-top: 7px;background: #ffffff;box-shadow: 0px 0px 6px 3px;border-radius: 10px;margin-bottom: 7px;">
+        <div class="container main-section">
             <!--Encabezado-->
             <!-- Banner Principal -->
-            <div class="container-fluid py-4"
-                style="background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%); border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-bottom: 30px; position: relative; overflow: hidden;">
+            <div class="container-fluid py-4 banner-section">
 
                 <!-- Efecto decorativo -->
-                <div
-                    style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: linear-gradient(135deg, rgba(106,17,203,0.1) 0%, rgba(37,117,252,0.1) 100%); border-radius: 50%;">
-                </div>
+                <div class="decorative-circle"></div>
 
                 <div class="container">
                     <!-- Fila de logos y título institucional -->
                     <div class="row align-items-center">
                         <div class="col-md-2 text-center d-none d-md-block">
-                            <img src="img/LOGO UNAM OSCURO.png" alt="UNAM"
-                                style="height: 100px; width: auto; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));">
+                            <img src="img/LOGO UNAM OSCURO.png" alt="UNAM" class="logo-img">
                         </div>
                         <div class="col-md-8 text-center">
-                            <h1
-                                style="font-size: 28px; font-weight: 700; color: #2c3e50; margin: 0; padding: 15px 0; line-height: 1.3;">
+                            <h1 class="main-title">
                                 Programa de Inducción e Integración del Alumnado de Nuevo Ingreso y Trayectorias
                                 Escolares<br>
-                                <span style="font-size: 22px;">(PIIANITE)</span>
+                                <span class="subtitle-span">(PIIANITE)</span>
                             </h1>
                         </div>
                         <div class="col-md-2 text-center d-none d-md-block">
-                            <img src="img/FES_Aragon_oscuro.png" alt="FES Aragón"
-                                style="height: 100px; width: auto; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));">
+                            <img src="img/FES_Aragon_oscuro.png" alt="FES Aragón" class="logo-img">
                         </div>
                     </div>
 
@@ -294,17 +287,15 @@
                             class="col-md-10 d-flex align-items-center justify-content-center flex-wrap text-center text-md-start">
                             <!-- Goyo -->
                             <div class="me-3 mb-2 mb-md-0">
-                                <img src="img/Goyo saludando.jpeg" alt="Goyo saludando"
-                                    style="height: 100px; border-radius: 12px; border: 3px solid white; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                                <img src="img/Goyo saludando.jpeg" alt="Goyo saludando" class="goyo-img">
                             </div>
 
                             <!-- Texto -->
                             <div>
-                                <h2
-                                    style="font-size: 32px; font-weight: 800; color: #ff476c; text-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 8px;">
+                                <h2 class="welcome-heading">
                                     ¡LA FES ARAGÓN TE DA LA BIENVENIDA!
                                 </h2>
-                                <h3 style="font-size: 24px; color: #6a11cb; margin: 0;">
+                                <h3 class="welcome-subheading">
                                     Generación 2026-I | SISTEMA PRESENCIAL Y SUAYED
                                 </h3>
                             </div>
@@ -314,13 +305,13 @@
                     <!-- Texto descriptivo -->
                     <div class="row justify-content-center mt-3">
                         <div class="col-lg-8 text-center">
-                            <p style="font-size: 18px; color: #34495e; line-height: 1.6;">
+                            <p class="intro-text">
                                 A través de esta plataforma podrás consultar las actividades para inscribirte e
                                 integrarte
                                 a esta nueva vida universitaria
                             </p>
-                            <p style="font-size: 17px; color: #2c3e50; font-weight: 600; margin-top: 10px;">
-                                Conoce las <span style="color: #e74c3c;">actividades necesarias</span> antes del trámite
+                            <p class="notice-text">
+                                Conoce las <span class="text-red">actividades necesarias</span> antes del trámite
                                 de inscripción presencial
                             </p>
                         </div>
@@ -336,7 +327,7 @@
                 <div class="col-xl-4">
                     <div class="card"><img class="card-img-top w-100 d-block" src="img/img_inscripciones_fes.jpg"
                             width="342" height="177" />
-                        <div class="card-body text-center" style="box-shadow: 0px 0px 5px;">
+                        <div class="card-body text-center card-body-shadow">
                             <h4 class="text-center card-title"><strong>INSCRIPCIÓN</strong></h4>
                             <p class="text-center card-text">Departamento <br />de servicios escolares</p>
                             <a class="btnAzul" role="button" data-bs-toggle="modal" data-bs-target="#Inscripcion">Ver
@@ -349,7 +340,7 @@
                 <div class="col">
                     <div class="card"><img class="card-img-top w-100 d-block" width="326" height="177"
                             src="img/img_curpi.jpg" />
-                        <div class="card-body text-center" style="box-shadow: 0px 0px 5px;">
+                        <div class="card-body text-center card-body-shadow">
                             <h4 class="card-title"><strong>REALIZA</strong></h4>
                             <p class="card-text">Cédula Única de Registro <br />de Nuevo Ingreso</p>
                             <a class="btnAzul" role="button" data-bs-toggle="modal" data-bs-target="#Curpi">Contestar
@@ -362,10 +353,10 @@
                 <div class="col">
                     <div class="card"><img class="card-img-top w-100 d-block" src="img/img_plataforma.png" width="326"
                             height="177" />
-                        <div class="card-body text-center" style="box-shadow: 0px 0px 5px;">
+                        <div class="card-body text-center card-body-shadow">
                             <h4 class="card-title"><strong>TRAMITA</strong></h4>
                             <p class="card-text">Correo electrónico<br />@aragon.unam.mx</p>
-                            <h4 style="color: #e74c3c; font-size: small;">El correo se tramita después de la inscripción
+                            <h4 class="text-red small-font">El correo se tramita después de la inscripción
                             </h4>
 
                             <!-- <a class="btnAzul" role="button" data-bs-toggle="modal"
@@ -440,7 +431,7 @@
                 <div class="col">
                     <!--Card Examen diagnostico-->
                     <div class="card text-center cardActividades">
-                        <div class="card-header" style="background-color: #00c4cc;">
+                        <div class="card-header card-header-cyan">
                             <i class="bi bi-1-circle-fill" style="font-size: 3rem; color: #ffffff;"></i>
                         </div>
                         <div class="card-body">
@@ -451,7 +442,7 @@
                                 data-bs-target="#ExamenDiagnostico">Realizar examen</a>
                         </div>
                         <div class="card-footer text-body-secondary">
-                            <span style="color: #ff4564;"><b>4 de Agosto al 5 de Septiembre</b></span>
+                            <span class="text-rose"><b>4 de Agosto al 5 de Septiembre</b></span>
                         </div>
                     </div>
                 </div>
@@ -459,7 +450,7 @@
                 <div class="col">
                     <!--Card Examen Médico Automatizado (EMA)-->
                     <div class="card text-center cardActividades">
-                        <div class="card-header" style="background-color: #00c4cc;">
+                        <div class="card-header card-header-cyan">
                             <i class="bi bi-2-circle-fill" style="font-size: 3rem; color: #ffffff;"></i>
                         </div>
                         <div class="card-body">
@@ -475,7 +466,7 @@
                                 requisitos</a>
                         </div>
                         <div class="card-footer text-body-secondary">
-                            <span style="color: #ff4564;"><b>Justo después del tramite de inscripción (Consulta
+                            <span class="text-rose"><b>Justo después del tramite de inscripción (Consulta
                                     cronogramas)</b></span>
                         </div>
                     </div>
@@ -484,7 +475,7 @@
                 <div class="col">
                     <!--Card TICOMETRO-->
                     <div class="card text-center cardActividades">
-                        <div class="card-header" style="background-color: #00c4cc;">
+                        <div class="card-header card-header-cyan">
                             <i class="bi bi-3-circle-fill" style="font-size: 3rem; color: #ffffff;"></i>
                         </div>
                         <div class="card-body">
@@ -494,7 +485,7 @@
                                 TICómetro</a>
                         </div>
                         <div class="card-footer text-body-secondary">
-                            <span style="color: #ff4564;"><b>7 de Agosto al 12 de Septiembre</b></span>
+                            <span class="text-rose"><b>7 de Agosto al 12 de Septiembre</b></span>
                         </div>
                     </div>
                 </div>
@@ -502,7 +493,7 @@
                 <div class="col">
                     <!--Card Seguro de salud-->
                     <div class="card text-center cardActividades">
-                        <div class="card-header" style="background-color: #00c4cc;">
+                        <div class="card-header card-header-cyan">
                             <i class="bi bi-4-circle-fill" style="font-size: 3rem; color: #ffffff;"></i>
                         </div>
                         <div class="card-body">
@@ -512,7 +503,7 @@
                                 data-bs-target="#SeguroSalud">Gestionar</a>
                         </div>
                         <div class="card-footer text-body-secondary">
-                            <span style="color: #ff4564;"><b>ACTIVIDAD PERMANENTE</b></span>
+                            <span class="text-rose"><b>ACTIVIDAD PERMANENTE</b></span>
                         </div>
                     </div>
                 </div>
@@ -520,14 +511,14 @@
                 <div class="col">
                     <!--Card Plática para madres y padres-->
                     <div class="card text-center cardActividades">
-                        <div class="card-header" style="background-color: #00c4cc;">
+                        <div class="card-header card-header-cyan">
                             <i class="bi bi-5-circle-fill" style="font-size: 3rem; color: #ffffff;"></i>
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">PLÁTICA CON LA DIRECTORA</h5>
                         </div>
                         <div class="card-footer text-body-secondary">
-                            <span style="color: #ff4564;"><b>De la semana del 11 al 15 de Agosto </b></span>
+                            <span class="text-rose"><b>De la semana del 11 al 15 de Agosto </b></span>
                         </div>
                     </div>
                 </div>
@@ -535,16 +526,16 @@
                 <div class="col">
                     <!--Card información para familiares-->
                     <div class="card text-center cardActividades">
-                        <div class="card-header" style="background-color: #00c4cc;">
+                        <div class="card-header card-header-cyan">
                             <i class="bi bi-6-circle-fill" style="font-size: 3rem; color: #ffffff;"></i>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title" style="margin-bottom: 20px;">INFORMACIÓN PARA FAMILIARES</h5>
+                            <h5 class="card-title title-margin">INFORMACIÓN PARA FAMILIARES</h5>
                             <a href="http://132.248.44.93:9090/PIIANI/INFOPADRES/" target="_blank" class="btnAzul">Ver
                                 información</a>
                         </div>
                         <div class="card-footer text-body-secondary">
-                            <span style="color: #ff4564;"><b>ACTIVIDAD PERMANENTE</b></span>
+                            <span class="text-rose"><b>ACTIVIDAD PERMANENTE</b></span>
                         </div>
                     </div>
                 </div>
@@ -552,16 +543,16 @@
                 <div>
                     <!--Card recorrido virtual de la FES-->
                     <div class="card text-center cardActividades">
-                        <div class="card-header" style="background-color: #00c4cc;">
+                        <div class="card-header card-header-cyan">
                             <i class="bi bi-7-circle-fill" style="font-size: 3rem; color: #ffffff;"></i>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title" style="margin-bottom: 20px;">RECORRIDO VIRTUAL DE LA FES ARAGÓN</h5>
+                            <h5 class="card-title title-margin">RECORRIDO VIRTUAL DE LA FES ARAGÓN</h5>
                             <a class="btnAzul" role="button" data-bs-toggle="modal"
                                 data-bs-target="#RecorridoVirtual">Ver recorrido</a>
                         </div>
                         <div class="card-footer text-body-secondary">
-                            <span style="color: #ff4564;"><b>ACTIVIDAD PERMANENTE</b></span>
+                            <span class="text-rose"><b>ACTIVIDAD PERMANENTE</b></span>
                         </div>
                     </div>
                 </div>
@@ -604,7 +595,7 @@
                             indicaciones de la Jefatura de Carrera a la que estás asignado/a:</b></p>
                     <div
                         style="background-color: #f8f9fa; border-radius: 10px; padding: 1.5rem; margin-bottom: 1.5rem; border-left: 4px solid #e74c3c;">
-                        <p style="color: #e74c3c; font-weight: 900; margin-bottom: 0.5rem; font-size: 1.1rem;">
+                        <p class="alert-red">
                             <i class="bi bi-exclamation-triangle-fill"></i> Mensaje importante <i
                                 class="bi bi-exclamation-triangle-fill"></i>
                         </p>
@@ -617,17 +608,16 @@
                     <div id="accordion-1" class="accordion" role="tablist">
 
 
-                        <div class="accordion-item" style="box-shadow: 0px 0px;margin-bottom: 14px;">
+                        <div class="accordion-item accordion-item-custom">
                             <h2 class="accordion-header" role="tab">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#item-1" aria-expanded="false" aria-controls="item-1"
-                                    style="background: #243ead;border-radius: 5px;box-shadow: 0px 0px 2px 1px rgb(0,0,0);border: none;">
+                                    <button class="accordion-button collapsed accordion-btn-custom" type="button" data-bs-toggle="collapse"
+                                      data-bs-target="#item-1" aria-expanded="false" aria-controls="item-1">
                                     <strong><span style="color: rgb(255, 255, 255);">División de Ciencias
                                             Sociales</span></strong>
                                 </button>
                             </h2>
-                            <div id="item-1" class="accordion-collapse collapse" role="tabpanel"
-                                data-bs-parent="#accordion-1" style="box-shadow: 0px 0px 2px 1px;border-radius: 4px;">
+                              <div id="item-1" class="accordion-collapse collapse accordion-collapse-custom" role="tabpanel"
+                                  data-bs-parent="#accordion-1">
                                 <div class="accordion-body">
                                     <p>Dar click en la imagen de tu carrera para descargar el cronograma individual</p>
                                     <div
@@ -665,17 +655,16 @@
                             </div>
                         </div>
 
-                        <div class="accordion-item" style="box-shadow: 0px 0px;margin-bottom: 14px;">
+                        <div class="accordion-item accordion-item-custom">
                             <h2 class="accordion-header" role="tab">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#item-2" aria-expanded="false" aria-controls="item-2"
-                                    style="background: #243ead;border-radius: 5px;box-shadow: 0px 0px 2px 1px rgb(0,0,0);border: none;">
+                                    <button class="accordion-button collapsed accordion-btn-custom" type="button" data-bs-toggle="collapse"
+                                      data-bs-target="#item-2" aria-expanded="false" aria-controls="item-2">
                                     <strong><span style="color: rgb(255, 255, 255);">División de Humanidades y
                                             Artes</span></strong>
                                 </button>
                             </h2>
-                            <div id="item-2" class="accordion-collapse collapse" role="tabpanel"
-                                data-bs-parent="#accordion-1" style="box-shadow: 0px 0px 2px 1px;border-radius: 4px;">
+                              <div id="item-2" class="accordion-collapse collapse accordion-collapse-custom" role="tabpanel"
+                                  data-bs-parent="#accordion-1">
                                 <div class="accordion-body">
                                     <p>Dar click en la imagen de tu carrera para descargar el cronograma individual</p>
                                     <div
@@ -698,17 +687,16 @@
                         </div>
 
 
-                        <div class="accordion-item" style="box-shadow: 0px 0px;margin-bottom: 14px;">
+                        <div class="accordion-item accordion-item-custom">
                             <h2 class="accordion-header" role="tab">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#item-3" aria-expanded="false" aria-controls="item-3"
-                                    style="background: #243ead;border-radius: 5px;box-shadow: 0px 0px 2px 1px rgb(0,0,0);border: none;">
+                                    <button class="accordion-button collapsed accordion-btn-custom" type="button" data-bs-toggle="collapse"
+                                      data-bs-target="#item-3" aria-expanded="false" aria-controls="item-3">
                                     <strong><span style="color: rgb(255, 255, 255);">División de Ciencias
                                             Fisico-Matematicas</span></strong>
                                 </button>
                             </h2>
-                            <div id="item-3" class="accordion-collapse collapse" role="tabpanel"
-                                data-bs-parent="#accordion-1" style="box-shadow: 0px 0px 2px 1px;border-radius: 4px;">
+                              <div id="item-3" class="accordion-collapse collapse accordion-collapse-custom" role="tabpanel"
+                                  data-bs-parent="#accordion-1">
                                 <div class="accordion-body">
                                     <p>Dar click en la imagen de tu carrera para descargar el cronograma individual</p>
                                     <div
@@ -739,17 +727,16 @@
                             </div>
                         </div>
 
-                        <div class="accordion-item" style="box-shadow: 0px 0px;margin-bottom: 14px;">
+                        <div class="accordion-item accordion-item-custom">
                             <h2 class="accordion-header" role="tab">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#item-4" aria-expanded="false" aria-controls="item-4"
-                                    style="background: #243ead;border-radius: 5px;box-shadow: 0px 0px 2px 1px rgb(0,0,0);border: none;">
+                                    <button class="accordion-button collapsed accordion-btn-custom" type="button" data-bs-toggle="collapse"
+                                      data-bs-target="#item-4" aria-expanded="false" aria-controls="item-4">
                                     <strong><span style="color: rgb(255, 255, 255);">División del Sistema Universidad
                                             Abierta y Educación a Distancia</span></strong>
                                 </button>
                             </h2>
-                            <div id="item-4" class="accordion-collapse collapse" role="tabpanel"
-                                data-bs-parent="#accordion-1" style="box-shadow: 0px 0px 2px 1px;border-radius: 4px;">
+                              <div id="item-4" class="accordion-collapse collapse accordion-collapse-custom" role="tabpanel"
+                                  data-bs-parent="#accordion-1">
                                 <div class="accordion-body">
                                     <p>Dar click en la imagen de tu carrera para descargar el cronograma individual</p>
                                     <div
@@ -1027,7 +1014,7 @@
                                         <br><br>
                                         <img src="img/paso 7 - curpi.jpeg" alt="Paso 7" class="img-fluid" width="300px">
                                     </li>
-                                    <li class="text-start" style="color: #ff4564;">
+                                    <li class="text-start text-rose">
                                         El formulario forzosamente debe enviar el mensaje de éxito al final, tras llenar
                                         el
                                         cuestionario, en caso de no hacerlo es por algún problema de inactividad en el
@@ -1036,7 +1023,7 @@
                                     </li>
                                 </ol>
 
-                                <p class="text-start" style="color: #ff4564;">Para verificar que el formulario fue
+                                <p class="text-start text-rose">Para verificar que el formulario fue
                                     llenado, puede volver a
                                     ingresar con el correo y contraseña y si nuevamente lo redirige al mensaje de éxito,
                                     significa que todo esta correcto</p>
@@ -1216,7 +1203,7 @@
                                     <br>
                                     <img src="img/ED3.JPG" alt="" width="300px">
                                     <br><br>
-                                    <li class="text-start"><span style="color: #ff4564;"><b>Copia el código que te
+                                    <li class="text-start"><span class="text-rose"><b>Copia el código que te
                                                 aparecerá en pantalla</b></span>, esté es indispensable para retomar el
                                         examen en caso de que los suspendas, ya sea por un corte eléctrico o de
                                         internet.</li>
@@ -1370,7 +1357,7 @@
                                 <br>
                                 <P class="text-start">El TICómetro es una prueba para que conozcas el nivel de dominio
                                     que tienes de las herramientas tecnológicas y de información,
-                                    <span style="color: #ff4564;">es importante que realices esta actividad en una
+                                    <span class="text-rose">es importante que realices esta actividad en una
                                         computadora de escritorio o laptop</span>, puesto que algunas preguntas son
                                     complicadas de responder en teléfonos celulares o tabletas.
                                     <br>Para realizarlo sigue los siguientes pasos:
@@ -1383,7 +1370,7 @@
                                     <li class="text-start">Identifícate utilizando tus credenciales</li>
                                     <br>
                                     <p style="font-size: 15px;">
-                                        <b style="color: #ff4564;">CAMPOS QUE SE SOLICITAN:</b><br>
+                                        <b class="text-rose">CAMPOS QUE SE SOLICITAN:</b><br>
                                         Número de cuenta<br>
                                         Fecha de nacimiento<br><br>
                                     </p>
@@ -1653,7 +1640,7 @@
                                     <li class="text-start">Ingresa tu número de cuenta y fecha de nacimiento</li><br>
 
                                     <p style="font-size: 15px;">
-                                        <b style="color: #ff4564;">CAMPOS QUE SE SOLICITAN:</b><br>
+                                        <b class="text-rose">CAMPOS QUE SE SOLICITAN:</b><br>
                                         Número de cuenta<br>
                                         Fecha de nacimiento<br><br>
                                         <b>EJEMPLO</b><br>
@@ -1676,7 +1663,7 @@
                                         selecciona guardar para posteriormente volver a entrar y seguir contestando.
                                     </li>
                                     <li class="text-start">
-                                        Al terminar <span style="color: #ff4564;">asegúrate de dar click en
+                                        Al terminar <span class="text-rose">asegúrate de dar click en
                                             finalizar</span>.
                                         Una vez finalizado el examen no se pueden realizar cambios.
                                     </li>
@@ -1775,8 +1762,7 @@
                         style="background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%); color: white; border-bottom: none; padding: 1.5rem;">
                         <!-- Logo UNAM -->
                         <div style="position: absolute; left: 20px; top: 50%; transform: translateY(-50%);">
-                            <img src="img/LOGO UNAM BLANCO TRANSPARENTE.png" alt="Escudo UNAM"
-                                style="height: 60px; width: auto; filter: drop-shadow(0 0 5px rgba(255,255,255,0.3));">
+                            <img src="img/LOGO UNAM BLANCO TRANSPARENTE.png" alt="Escudo UNAM" class="logo-small">
                         </div>
 
                         <!-- Título -->
@@ -1787,8 +1773,7 @@
 
                         <!-- Logo FES -->
                         <div style="position: absolute; right: 20px; top: 50%; transform: translateY(-50%);">
-                            <img src="img/FES Aragon blanco transparente.png" alt="Escudo FES"
-                                style="height: 60px; width: auto; filter: drop-shadow(0 0 5px rgba(255,255,255,0.3));">
+                            <img src="img/FES Aragon blanco transparente.png" alt="Escudo FES" class="logo-small">
                         </div>
 
                         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
@@ -1804,7 +1789,7 @@
                         <!-- Aviso general -->
                         <div
                             style="background-color: #f8f9fa; border-radius: 10px; padding: 1.5rem; margin-bottom: 1.5rem; border-left: 4px solid #e74c3c;">
-                            <p style="color: #e74c3c; font-weight: 900; margin-bottom: 0.5rem; font-size: 1.1rem;">
+                            <p class="alert-red">
                                 <i class="bi bi-exclamation-triangle-fill"></i> Mensaje importante <i
                                     class="bi bi-exclamation-triangle-fill"></i>
                             </p>
@@ -1817,7 +1802,7 @@
                         <!-- Aviso sobre identificación -->
                         <div
                             style="background-color: #fff3cd; border-radius: 10px; padding: 1.5rem; margin-bottom: 1.5rem; border-left: 4px solid #ffcc00;">
-                            <p style="color: #856404; font-weight: 900; margin-bottom: 0.5rem; font-size: 1.1rem;">
+                            <p class="alert-warning">
                                 <i class="bi bi-person-vcard-fill"></i> Requisito indispensable
                             </p>
                             <p style="color: #5a5a5a; font-weight: 600; margin-bottom: 0;">
