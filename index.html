@@ -150,6 +150,34 @@
             box-shadow: 0 0 15px 4px rgba(29, 112, 255, 0.8);
         }
 
+        .tiktok-float {
+            position: fixed;
+            bottom: 20px;
+            right: 140px;
+            /* alineado con los otros íconos flotantes */
+            z-index: 1030;
+            cursor: pointer;
+            border-radius: 50%;
+            overflow: hidden;
+            /* brillo combinado con colores de marca TikTok (cian/rosa) */
+            box-shadow:
+                0 0 10px rgba(105, 201, 208, 0.5),
+                0 0 10px rgba(238, 29, 82, 0.35);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .tiktok-float img {
+            border-radius: 50%;
+            display: block;
+        }
+
+        .tiktok-float:hover {
+            transform: scale(1.1);
+            box-shadow:
+                0 0 16px 4px rgba(105, 201, 208, 0.8),
+                0 0 16px 4px rgba(238, 29, 82, 0.6);
+        }
+
         .qr-container {
             max-width: 200px;
             margin: 0 auto;
@@ -2035,6 +2063,39 @@
                 </div>
             </div>
         </div>
+
+        <!--         
+        
+        <a href="#" data-bs-toggle="modal" data-bs-target="#tiktokModal" class="tiktok-float">
+            <img src="https://cdn-icons-png.flaticon.com/512/3046/3046126.png" alt="TikTok" width="50" height="50">
+        </a>
+
+      
+        <div class="modal fade" id="tiktokModal" tabindex="-1" aria-labelledby="tiktokModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content border-0 shadow">
+                    <div class="modal-header" style="background:#000; color:#fff;">
+                        <h5 class="modal-title" id="tiktokModalLabel">¡Síguenos en TikTok!</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                            aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <p class="mb-3">
+                            Personas de nuevo ingreso: sígannos en TikTok para ver tips, avisos y contenido útil.
+                        </p>
+                        
+                        <a href="https://www.tiktok.com" target="_blank" class="btn w-100"
+                            style="background:#000; color:#fff;">
+                            Abrir TikTok
+                        </a>
+                        <p class="mt-2 text-muted" style="font-size: 0.9rem;">
+                            Reemplaza la URL por la de tu cuenta oficial cuando la tengas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div> -->
         <!-- Ícono flotante de Facebook -->
         <a href="#" data-bs-toggle="modal" data-bs-target="#facebookModal" class="facebook-float">
             <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" width="50" height="50">
