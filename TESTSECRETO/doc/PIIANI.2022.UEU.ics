@@ -1,0 +1,299 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PIIANI.2022.UEU
+X-WR-TIMEZONE:America/Mexico_City
+X-WR-CALDESC:La Unidad de Extensión Universitaria presenta una serie de act
+ ividades\, con el objetivo de fortalecer la formación complementaria de nat
+ uraleza cultural\, artística\, deportiva y recreativa.
+BEGIN:VTIMEZONE
+TZID:America/Mexico_City
+X-LIC-LOCATION:America/Mexico_City
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:19700405T020000
+RRULE:FREQ=YEARLY;BYMONTH=4;BYDAY=1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:19701025T020000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTART;TZID=America/Mexico_City:20210811T170000
+DTEND;TZID=America/Mexico_City:20210811T180000
+RRULE:FREQ=WEEKLY;WKST=MO;UNTIL=20210828T045959Z;BYDAY=TH,WE
+DTSTAMP:20210807T053113Z
+UID:30q2e591uv6clcdvqakj3pjtmi@google.com
+CREATED:20210806T171436Z
+DESCRIPTION:<table><tbody><tr><td>Felipe Gómez Padilla</td></tr></tbody></t
+ able> <br>Las sesiones y los enlaces de Zoom o Meet se proporcionarán por l
+ a Unidad de Extensión Universitaria
+LAST-MODIFIED:20210806T171506Z
+LOCATION:
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Jazz básico
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Mexico_City:20210812T170000
+DTEND;TZID=America/Mexico_City:20210812T200000
+RRULE:FREQ=WEEKLY;WKST=MO;UNTIL=20210828T045959Z;BYDAY=TH
+DTSTAMP:20210807T053113Z
+UID:2u0a2q5dlr78bef15vi4rluucn@google.com
+CREATED:20210806T171356Z
+DESCRIPTION:<table><tbody><tr><td>Ariana Marlen Escamilla Pedraza</td></tr>
+ </tbody></table> <br>Las sesiones y los enlaces de Zoom o Meet se proporcio
+ narán por la Unidad de Extensión Universitaria
+LAST-MODIFIED:20210806T171520Z
+LOCATION:
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Aplicaciones prácticas de la oratoria en las aulas de clase
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Mexico_City:20210810T130000
+DTEND;TZID=America/Mexico_City:20210810T150000
+RRULE:FREQ=WEEKLY;WKST=MO;UNTIL=20210828T045959Z;BYDAY=TH,TU
+DTSTAMP:20210807T053113Z
+UID:3rm39jqbcq3npn4n559mei9b4t@google.com
+CREATED:20210806T171632Z
+DESCRIPTION:<table><tbody><tr><td>Arturo Salvadores Baledón</td></tr></tbod
+ y></table> <br>Las sesiones y los enlaces de Zoom o Meet se proporcionarán 
+ por la Unidad de Extensión Universitaria
+LAST-MODIFIED:20210806T171654Z
+LOCATION:
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Coro como herramienta de trabajo en equipo
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Mexico_City:20210809T150000
+DTEND;TZID=America/Mexico_City:20210809T160000
+RRULE:FREQ=WEEKLY;WKST=MO;UNTIL=20210828T045959Z;BYDAY=MO,WE
+DTSTAMP:20210807T053113Z
+UID:759988u6fqjak6j4qrqotisd7n@google.com
+CREATED:20210806T171906Z
+DESCRIPTION:<table><tbody><tr><td>Danaé Barajas Rubio</td></tr></tbody></ta
+ ble> <br>Las sesiones y los enlaces de Zoom o Meet se proporcionarán por la
+  Unidad de Extensión Universitaria
+LAST-MODIFIED:20210806T171938Z
+LOCATION:
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Danza neoclásica: una aproximación
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Mexico_City:20210810T120000
+DTEND;TZID=America/Mexico_City:20210810T130000
+RRULE:FREQ=WEEKLY;WKST=MO;UNTIL=20210828T045959Z;BYDAY=FR,TH,TU
+DTSTAMP:20210807T053113Z
+UID:002c8rc5ilpku506jh2n3nrv91@google.com
+CREATED:20210806T172014Z
+DESCRIPTION:<table><tbody><tr><td>Erika Gabriela Juárez Maldonado</td></tr>
+ </tbody></table> <br>Las sesiones y los enlaces de Zoom o Meet se proporcio
+ narán por la Unidad de Extensión Universitaria
+LAST-MODIFIED:20210806T172038Z
+LOCATION:
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:El teatro como herramienta de expresión e improvisación en las aula
+ s de clase
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Mexico_City:20210810T110000
+DTEND;TZID=America/Mexico_City:20210810T130000
+RRULE:FREQ=WEEKLY;WKST=MO;UNTIL=20210828T045959Z;BYDAY=FR,TH,TU
+DTSTAMP:20210807T053113Z
+UID:7h8orolnn6jeeuoant6pvihehe@google.com
+CREATED:20210806T172327Z
+DESCRIPTION:<table><tbody><tr><td>Profesoras y profesores del área deportiv
+ a</td></tr></tbody></table> <br>Las sesiones y los enlaces de Zoom o Meet s
+ e proporcionarán por la Unidad de Extensión Universitaria
+LAST-MODIFIED:20210806T172354Z
+LOCATION:
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Activación física introductoria a la práctica deportiva
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Mexico_City:20210810T170000
+DTEND;TZID=America/Mexico_City:20210810T190000
+RRULE:FREQ=WEEKLY;WKST=MO;UNTIL=20210829T045959Z;BYDAY=FR,TH,TU
+DTSTAMP:20210807T053113Z
+UID:6p0ck7qsqtls34h60i6mts9ccd@google.com
+CREATED:20210806T172428Z
+DESCRIPTION:<table><tbody><tr><td>Profesoras y profesores del área deportiv
+ a</td></tr></tbody></table> <br>Las sesiones y los enlaces de Zoom o Meet s
+ e proporcionarán por la Unidad de Extensión Universitaria
+LAST-MODIFIED:20210806T172428Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Activación física introductoria a la práctica deportiva
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Mexico_City:20210814T100000
+DTEND;TZID=America/Mexico_City:20210814T120000
+RRULE:FREQ=WEEKLY;WKST=MO;UNTIL=20210829T045959Z;BYDAY=SA
+DTSTAMP:20210807T053113Z
+UID:21lm79gkcvn276p5e0abd0asl6@google.com
+CREATED:20210806T172525Z
+DESCRIPTION:<table><tbody><tr><td>Profesoras y profesores del área deportiv
+ a</td></tr></tbody></table> <br>Las sesiones y los enlaces de Zoom o Meet s
+ e proporcionarán por la Unidad de Extensión Universitaria
+LAST-MODIFIED:20210806T172539Z
+LOCATION:
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Activación física introductoria a la práctica deportiva
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Mexico_City:20210809T100000
+DTEND;TZID=America/Mexico_City:20210809T110000
+RRULE:FREQ=WEEKLY;WKST=MO;UNTIL=20210828T045959Z;BYDAY=FR,MO,WE
+DTSTAMP:20210807T053113Z
+UID:5klo6dvmn3i0ijeth5rn3jbsu4@google.com
+CREATED:20210806T172624Z
+DESCRIPTION:<table><tbody><tr><td>Alma Rosa Olvera</td></tr></tbody></table
+ > <br>Las sesiones y los enlaces de Zoom o Meet se proporcionarán por la Un
+ idad de Extensión Universitaria
+LAST-MODIFIED:20210806T172650Z
+LOCATION:
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Zumba
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Mexico_City:20210810T170000
+DTEND;TZID=America/Mexico_City:20210810T180000
+RRULE:FREQ=WEEKLY;WKST=MO;UNTIL=20210829T045959Z;BYDAY=TH,TU
+DTSTAMP:20210807T053113Z
+UID:1qampscr4g39d4qe1b0jobrj6b@google.com
+CREATED:20210806T172731Z
+DESCRIPTION:<table><tbody><tr><td>Alma Rosa Olvera</td></tr></tbody></table
+ > <br>Las sesiones y los enlaces de Zoom o Meet se proporcionarán por la Un
+ idad de Extensión Universitaria
+LAST-MODIFIED:20210806T172731Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Zumba
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Mexico_City:20210814T110000
+DTEND;TZID=America/Mexico_City:20210814T120000
+RRULE:FREQ=WEEKLY;WKST=MO;UNTIL=20210830T045959Z;BYDAY=SA
+DTSTAMP:20210807T053113Z
+UID:0qhv023ucdo2jhgrbg5nmh2133@google.com
+CREATED:20210806T172838Z
+DESCRIPTION:<table><tbody><tr><td>Alma Rosa Olvera</td></tr></tbody></table
+ > <br>Las sesiones y los enlaces de Zoom o Meet se proporcionarán por la Un
+ idad de Extensión Universitaria
+LAST-MODIFIED:20210806T172838Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Zumba
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Mexico_City:20210809T090000
+DTEND;TZID=America/Mexico_City:20210809T100000
+RRULE:FREQ=WEEKLY;WKST=MO;UNTIL=20210828T045959Z;BYDAY=FR,MO,SA,TH,TU,WE
+DTSTAMP:20210807T053113Z
+UID:3r8paa4p6d3o59desq8arko5u7@google.com
+CREATED:20210806T172159Z
+DESCRIPTION:<table><tbody><tr><td>Abner Uriel Santa López</td></tr></tbody>
+ </table><br><br><table><tbody><tr><td>Lunes a viernes horario abierto de 09
+ :00 a 20:00 hrs.<br><br>Sábado: Horario abierto de 09:00 a 14:00 hrs<br><br
+ >Las sesiones y los enlaces de Zoom o Meet se proporcionarán por la Unidad 
+ de Extensión Universitaria<br></td></tr></tbody></table>
+LAST-MODIFIED:20210806T174806Z
+LOCATION:
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:OBS para principiantes: saca provecho y mejora tus exposiciones en 
+ Google Meet
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20210809
+DTEND;VALUE=DATE:20210810
+RRULE:FREQ=WEEKLY;WKST=MO;UNTIL=20210828;BYDAY=MO,WE
+DTSTAMP:20210807T053113Z
+UID:1jjv10dma9plbrvki2b48n25aa@google.com
+CREATED:20210806T174731Z
+DESCRIPTION:<table><tbody><tr><td>Ponentes por definir</td></tr></tbody></t
+ able><br><br><table><tbody><tr><td>Lunes y miércoles<br>11:00 y 18:00 hrs.<
+ br><br>Las sesiones y los enlaces de Zoom o Meet se proporcionarán por la U
+ nidad de Extensión Universitaria<br></td></tr></tbody></table>
+LAST-MODIFIED:20210806T174819Z
+LOCATION:
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Aportaciones de la cultura a la formación integral de las y los est
+ udiantes.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20210810
+DTEND;VALUE=DATE:20210811
+RRULE:FREQ=WEEKLY;WKST=MO;UNTIL=20210828;BYDAY=SA,TH,TU
+DTSTAMP:20210807T053113Z
+UID:6uajj67uftrpl4oquk2slbkjes@google.com
+CREATED:20210806T174407Z
+DESCRIPTION:<table><tbody><tr><td><table><tbody><tr><td>Sandra Yahel Martín
+ ez García<br>Luis Adrián Uribe Hernández</td></tr></tbody></table> <br>Mart
+ es y jueves:<br>10:00 a 10:30 hrs<br>11:00 a 11:30 hrs<br>12:00 a 12:30 hrs
+ <br>13:00 a 13:30 hrs<br>16:00 a 16:30 hrs<br>17:00 a 17:30 hrs<br>18:00 a 
+ 18:30 hrs<br><br>Sábado:<br>10:00 a 10:30 hrs<br>11:00 a 11:30 hrs<br><br>L
+ as sesiones y los enlaces de Zoom o Meet se proporcionarán por la Unidad de
+  Extensión Universitaria<br></td></tr></tbody></table>
+LAST-MODIFIED:20210806T174831Z
+LOCATION:
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Charla interactiva - Asómbrate con la cultura y emociónate con el d
+ eporte
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20210811
+DTEND;VALUE=DATE:20210812
+RRULE:FREQ=WEEKLY;WKST=MO;UNTIL=20210828;BYDAY=FR,SA,WE
+DTSTAMP:20210807T053113Z
+UID:5utj97efelv7fp3dc8nlcj502g@google.com
+CREATED:20210806T174631Z
+DESCRIPTION:<table><tbody><tr><td>Miguel Ángel Juárez Valencia</td></tr></t
+ body></table> <br><table><tbody><tr><td>Miércoles y viernes:<br><br>10:00 a
+  10:30 hrs</td></tr></tbody></table><br><br><table><tbody><tr><td>17:00 a 1
+ 7:30 hrs<br><br>Sábado:<br><br>10:00 a 10:30 hrs<br><br>Las sesiones y los 
+ enlaces de Zoom o Meet se proporcionarán por la Unidad de Extensión Univers
+ itaria<br></td></tr></tbody></table>
+LAST-MODIFIED:20210806T174842Z
+LOCATION:
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Charla interactiva - ¿Te interesa ser parte de un equipo deportivo 
+ representativo?
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

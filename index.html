@@ -1,0 +1,2099 @@
+<html lang="escolar">
+
+<head>
+    <meta charset="utf-8" />
+    <title>PIIANITE</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css\qremergente.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        body {
+            background: url(img/motivoAzul.png) center / contain repeat, #e0e0e0;
+        }
+
+        .btnAzul {
+            background: #28c8d4;
+            color: #ffffff;
+            padding-left: 0.75rem;
+            padding-top: 0.25rem;
+            padding-right: 0.75rem;
+            padding-bottom: 0.40rem;
+            border-radius: 6px;
+            box-shadow: 0px 0px 3px 1px rgb(0, 0, 0);
+        }
+
+        .btnAzul:hover {
+            background: #ff476c;
+            transition: all 1s ease;
+        }
+
+        .btnRojo {
+            background: #ff476c;
+            padding: 18px;
+            border-radius: 16px;
+            box-shadow: 0px 1px 3px 1px rgb(0, 0, 0);
+
+            span {
+                color: #ffffff;
+            }
+        }
+
+        .btnRojo:hover {
+            background: #ff476cf6;
+            filter: none;
+            animation: pulse 5.0s infinite;
+            transition: all 1s ease;
+        }
+
+        .btnDudas {
+            background: #9c9c9c;
+            padding: 18px;
+            border-radius: 16px;
+            box-shadow: 0px 1px 3px 1px rgb(0, 0, 0);
+
+            span {
+                color: #ffffff;
+            }
+        }
+
+        .btnDudas:hover {
+            background: #777777d9;
+            filter: none;
+            animation: pulse 5.0s infinite;
+            transition: all 1s ease;
+        }
+
+        .cardActividades {
+            box-shadow: 0px 0px 3px 1px rgb(0, 0, 0);
+            border-color: none;
+        }
+
+        a {
+            text-decoration: none;
+            margin-top: 10px;
+        }
+
+        .btnHorarios {
+            background: #243ead;
+            padding: 18px;
+            border-radius: 16px;
+            box-shadow: 0px 1px 3px 1px rgb(0, 0, 0);
+
+            span {
+                color: #ffffff;
+            }
+        }
+
+        .btnHorarios:hover {
+            background: #0e2278;
+            filter: none;
+            animation: pulse 5.0s infinite;
+            transition: all 1s ease;
+        }
+
+        .colHover:hover {
+            background: #e0e0e0;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1050;
+            cursor: pointer;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .whatsapp-float img {
+            border-radius: 50%;
+            display: block;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px 4px rgba(0, 255, 0, 0.8);
+        }
+
+        .facebook-float {
+            position: fixed;
+            bottom: 20px;
+            right: 80px;
+            z-index: 1050;
+            cursor: pointer;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(29, 112, 255, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .facebook-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px 4px rgba(29, 112, 255, 0.8);
+        }
+
+        .qr-container {
+            max-width: 200px;
+            margin: 0 auto;
+        }
+
+        .qr-container img {
+            width: 100%;
+            height: auto;
+        }
+
+        .objeto-no-disponible {
+            position: relative;
+            /* Esencial para posicionar el filtro encima de la imagen */
+            display: inline-block;
+            /* Ajusta el contenedor al tamaño de la imagen */
+            cursor: not-allowed;
+            /* Cambia el cursor para indicar que no es interactivo */
+            opacity: 0.8;
+            /* Opcional: Reduce un poco la opacidad general de la imagen */
+        }
+
+        .objeto-no-disponible::before {
+            content: '';
+            /* Necesario para que el pseudo-elemento se muestre */
+            position: absolute;
+            /* Permite que el filtro se coloque sobre la imagen */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(128, 128, 128, 0.6);
+            /* Gris con 60% de opacidad */
+            z-index: 1;
+            /* Asegura que el filtro esté por encima de la imagen */
+        }
+    </style>
+
+    <script>
+        function mostrarModal(modalId) {
+            const modalElement = document.getElementById(modalId);
+            if (modalElement) {
+                const modalInstance = new bootstrap.Modal(modalElement);
+                modalInstance.show();
+                return modalInstance;
+            } else {
+                console.error(`No se encontró ningún modal con el ID: ${modalId}`);
+                return null;
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const modalUrgenteId = 'modalUrgente';
+            const modalAvisoId = 'AvisoInicio';
+            const modalWhatsappId = 'whatsappModal';
+
+            const modalUrgente = document.getElementById(modalUrgenteId);
+            const modalAviso = document.getElementById(modalAvisoId);
+
+            if (modalUrgente) {
+                const modal1 = new bootstrap.Modal(modalUrgente);
+                modal1.show();
+
+                // Al cerrar modal urgente, mostrar AvisoInicio
+                modalUrgente.addEventListener('hidden.bs.modal', () => {
+                    if (modalAviso) {
+                        const modal2 = new bootstrap.Modal(modalAviso);
+                        modal2.show();
+
+                        // Al cerrar AvisoInicio, mostrar whatsappModal
+                        modalAviso.addEventListener('hidden.bs.modal', () => {
+                            mostrarModal(modalWhatsappId);
+                        });
+                    } else {
+                        mostrarModal(modalWhatsappId);
+                    }
+                });
+            } else if (modalAviso) {
+                const modal2 = new bootstrap.Modal(modalAviso);
+                modal2.show();
+
+                modalAviso.addEventListener('hidden.bs.modal', () => {
+                    mostrarModal(modalWhatsappId);
+                });
+            } else {
+                mostrarModal(modalWhatsappId);
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const enlace = document.getElementById('cedulaEnlace');
+            if (enlace) {
+                enlace.addEventListener('click', function (e) {
+                    e.preventDefault(); // Evita que se abra el enlace
+                    alert("Aviso importante:\n\nLa plataforma para el registro aún se encuentra en proceso de habilitación. Le invitamos a mantenerse atenta(o) a los canales oficiales, donde se informará oportunamente su disponibilidad en los próximos días.");
+                });
+            }
+        });
+    </script>
+
+
+
+</head>
+
+<body>
+    <main>
+        <!--Container-->
+        <div class="container"
+            style="padding: 30px;margin-top: 7px;background: #ffffff;box-shadow: 0px 0px 6px 3px;border-radius: 10px;margin-bottom: 7px;">
+            <!--Encabezado-->
+            <!-- Banner Principal -->
+            <div class="container-fluid py-4"
+                style="background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%); border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-bottom: 30px; position: relative; overflow: hidden;">
+
+                <!-- Efecto decorativo -->
+                <div
+                    style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: linear-gradient(135deg, rgba(106,17,203,0.1) 0%, rgba(37,117,252,0.1) 100%); border-radius: 50%;">
+                </div>
+
+                <div class="container">
+                    <!-- Fila de logos y título institucional -->
+                    <div class="row align-items-center">
+                        <div class="col-md-2 text-center d-none d-md-block">
+                            <img src="img/LOGO UNAM OSCURO.png" alt="UNAM"
+                                style="height: 100px; width: auto; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));">
+                        </div>
+                        <div class="col-md-8 text-center">
+                            <h1
+                                style="font-size: 28px; font-weight: 700; color: #2c3e50; margin: 0; padding: 15px 0; line-height: 1.3;">
+                                Programa de Inducción e Integración del Alumnado de Nuevo Ingreso y Trayectorias
+                                Escolares<br>
+                                <span style="font-size: 22px;">(PIIANITE)</span>
+                            </h1>
+                        </div>
+                        <div class="col-md-2 text-center d-none d-md-block">
+                            <img src="img/FES_Aragon_oscuro.png" alt="FES Aragón"
+                                style="height: 100px; width: auto; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));">
+                        </div>
+                    </div>
+
+                    <!-- Goyo y texto de bienvenida en la misma fila -->
+                    <div class="row mt-4 justify-content-center">
+                        <div
+                            class="col-md-10 d-flex align-items-center justify-content-center flex-wrap text-center text-md-start">
+                            <!-- Goyo -->
+                            <div class="me-3 mb-2 mb-md-0">
+                                <img src="img/Goyo saludando.jpeg" alt="Goyo saludando"
+                                    style="height: 100px; border-radius: 12px; border: 3px solid white; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                            </div>
+
+                            <!-- Texto -->
+                            <div>
+                                <h2
+                                    style="font-size: 32px; font-weight: 800; color: #ff476c; text-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 8px;">
+                                    ¡LA FES ARAGÓN TE DA LA BIENVENIDA!
+                                </h2>
+                                <h3 style="font-size: 24px; color: #6a11cb; margin: 0;">
+                                    Generación 2026-I | SISTEMA PRESENCIAL Y SUAYED
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Texto descriptivo -->
+                    <div class="row justify-content-center mt-3">
+                        <div class="col-lg-8 text-center">
+                            <p style="font-size: 18px; color: #34495e; line-height: 1.6;">
+                                A través de esta plataforma podrás consultar las actividades para inscribirte e
+                                integrarte
+                                a esta nueva vida universitaria
+                            </p>
+                            <p style="font-size: 17px; color: #2c3e50; font-weight: 600; margin-top: 10px;">
+                                Conoce las <span style="color: #e74c3c;">actividades necesarias</span> antes del trámite
+                                de inscripción presencial
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--Cards principales-->
+            <div class="row gx-5 gy-3 row-cols-1 row-cols-md-2 row-cols-lg-3 justify-content-center">
+
+                <!--Card Inscripcion-->
+                <div class="col-xl-4">
+                    <div class="card"><img class="card-img-top w-100 d-block" src="img/img_inscripciones_fes.jpg"
+                            width="342" height="177" />
+                        <div class="card-body text-center" style="box-shadow: 0px 0px 5px;">
+                            <h4 class="text-center card-title"><strong>INSCRIPCIÓN</strong></h4>
+                            <p class="text-center card-text">Departamento <br />de servicios escolares</p>
+                            <a class="btnAzul" role="button" data-bs-toggle="modal" data-bs-target="#Inscripcion">Ver
+                                tramites</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Card Curpi-->
+                <div class="col">
+                    <div class="card"><img class="card-img-top w-100 d-block" width="326" height="177"
+                            src="img/img_curpi.jpg" />
+                        <div class="card-body text-center" style="box-shadow: 0px 0px 5px;">
+                            <h4 class="card-title"><strong>REALIZA</strong></h4>
+                            <p class="card-text">Cédula Única de Registro <br />de Nuevo Ingreso</p>
+                            <a class="btnAzul" role="button" data-bs-toggle="modal" data-bs-target="#Curpi">Contestar
+                                encuesta</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Card Correo-->
+                <div class="col">
+                    <div class="card"><img class="card-img-top w-100 d-block" src="img/img_plataforma.png" width="326"
+                            height="177" />
+                        <div class="card-body text-center" style="box-shadow: 0px 0px 5px;">
+                            <h4 class="card-title"><strong>TRAMITA</strong></h4>
+                            <p class="card-text">Correo electrónico<br />@aragon.unam.mx</p>
+                            <h4 style="color: #e74c3c; font-size: small;">El correo se tramita después de la inscripción
+                            </h4>
+
+                            <!-- <a class="btnAzul" role="button" data-bs-toggle="modal"
+                                data-bs-target="#CorreoAragon">Visitar el sitio</a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+
+            <!--Encabezado botones carta compromiso-->
+            <div class="row">
+                <div class="col">
+                    <h2 class="text-center" style="font-size: 24px;margin-bottom: 16px;"><b><strong><span
+                                    style="color: rgb(255, 71, 108);">¡ENHORABUENA!</span></strong></b></h2>
+                </div>
+            </div>
+
+            <!--Botones carta compromiso y servicios escolares-->
+            <div class="row gx-5 gy-2 row-cols-1 row-cols-lg-2 justify-content-center align-items-center">
+                <div class="col text-center align-self-center">
+                    <a href="doc/CARTA_COMPROMISO_GEN_2026-1.pdf" target="_blank">
+                        <div class="btnRojo">
+                            <span>
+                                <strong>Descarga carta compromiso</strong>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col text-center align-self-center">
+                    <a href="http://aragon.dgae.unam.mx/" target="_blank">
+                        <div class="btnRojo">
+                            <span>
+                                <strong>Servicios Escolares</strong>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!--Texto informativo de los botones carta compromiso y servicios escolares-->
+            <div class="row">
+                <div class="col">
+                    <h3 class="text-center" style="font-size: 22px;"><br /><strong><span style="color: #ff476c;">ES
+                                INDISPENSABLE QUE EL DÍA DE LA INSCRIPCIÓN LOS DOCUMENTOS SE ENCUENTREN EN
+                                ORDEN.</span></strong></h3>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-9">
+                    <p class="text-center">La entrega de documentación incompleta y/o apócrifa, cancelará el trámite y
+                        se procederá conforme a lo establecido en la legislación universitaria</p>
+                    <p style="text-align: center;">
+                        <span style="color: #0b4c8c;">Si tienes alguna duda o aclaración con tu inscripción:</span>
+                        <br />
+                        <span style="color: #0b4c8c;">Atención de lunes a viernes 9:00 a 20:00 hrs. al correo
+                            electrónico</span>
+                        <br />
+                        <a href="mailto:serviciosescolares@aragon.unam.mx"
+                            target="_blank">serviciosescolares@aragon.unam.mx</a>
+                    </p>
+                </div>
+            </div>
+            <hr />
+
+            <!--Actividades-->
+            <div class="text-center">
+                <h2 style="font-size: 24px;text-align: center; margin-bottom: 16px;"><b><strong><span
+                                style="color: #28c8d4;">ACTIVIDADES DE NUEVO INGRESO</span></strong></b></h2>
+            </div>
+            <div class="row gx-5 gy-3 row-cols-1 row-cols-lg-2 justify-content-center">
+                <div class="col">
+                    <!--Card Examen diagnostico-->
+                    <div class="card text-center cardActividades">
+                        <div class="card-header" style="background-color: #00c4cc;">
+                            <i class="bi bi-1-circle-fill" style="font-size: 3rem; color: #ffffff;"></i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">EXAMEN DIAGNÓSTICO</h5>
+                            <p class="card-text">Realiza el examen diagnóstico de conocimientos, español e inglés
+                            </p>
+                            <a class="btnAzul" role="button" data-bs-toggle="modal"
+                                data-bs-target="#ExamenDiagnostico">Realizar examen</a>
+                        </div>
+                        <div class="card-footer text-body-secondary">
+                            <span style="color: #ff4564;"><b>4 de Agosto al 5 de Septiembre</b></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <!--Card Examen Médico Automatizado (EMA)-->
+                    <div class="card text-center cardActividades">
+                        <div class="card-header" style="background-color: #00c4cc;">
+                            <i class="bi bi-2-circle-fill" style="font-size: 3rem; color: #ffffff;"></i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">EXAMEN MÉDICO AUTOMATIZADO (EMA)</h5>
+                            <p class="card-text">Realiza el examen médico automatizado (EMA)
+                                <!--
+                            <br>
+                            Tramite rquerido para Escolarizado presencial
+                          -->
+                            </p>
+
+                            <a class="btnAzul" role="button" data-bs-toggle="modal" data-bs-target="#EMADistancia">Ver
+                                requisitos</a>
+                        </div>
+                        <div class="card-footer text-body-secondary">
+                            <span style="color: #ff4564;"><b>Justo después del tramite de inscripción (Consulta
+                                    cronogramas)</b></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <!--Card TICOMETRO-->
+                    <div class="card text-center cardActividades">
+                        <div class="card-header" style="background-color: #00c4cc;">
+                            <i class="bi bi-3-circle-fill" style="font-size: 3rem; color: #ffffff;"></i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">TICÓMETRO</h5>
+                            <p class="card-text">Aplica la prueba del TICómetro</p>
+                            <a class="btnAzul" role="button" data-bs-toggle="modal" data-bs-target="#Ticometro">Realizar
+                                TICómetro</a>
+                        </div>
+                        <div class="card-footer text-body-secondary">
+                            <span style="color: #ff4564;"><b>7 de Agosto al 12 de Septiembre</b></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <!--Card Seguro de salud-->
+                    <div class="card text-center cardActividades">
+                        <div class="card-header" style="background-color: #00c4cc;">
+                            <i class="bi bi-4-circle-fill" style="font-size: 3rem; color: #ffffff;"></i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">SEGURO DE SALUD</h5>
+                            <p class="card-text">Gestiona el seguro de salud del estudiante</p>
+                            <a class="btnAzul" role="button" data-bs-toggle="modal"
+                                data-bs-target="#SeguroSalud">Gestionar</a>
+                        </div>
+                        <div class="card-footer text-body-secondary">
+                            <span style="color: #ff4564;"><b>ACTIVIDAD PERMANENTE</b></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <!--Card Plática para madres y padres-->
+                    <div class="card text-center cardActividades">
+                        <div class="card-header" style="background-color: #00c4cc;">
+                            <i class="bi bi-5-circle-fill" style="font-size: 3rem; color: #ffffff;"></i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">PLÁTICA CON LA DIRECTORA</h5>
+                        </div>
+                        <div class="card-footer text-body-secondary">
+                            <span style="color: #ff4564;"><b>De la semana del 11 al 15 de Agosto </b></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <!--Card información para familiares-->
+                    <div class="card text-center cardActividades">
+                        <div class="card-header" style="background-color: #00c4cc;">
+                            <i class="bi bi-6-circle-fill" style="font-size: 3rem; color: #ffffff;"></i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title" style="margin-bottom: 20px;">INFORMACIÓN PARA FAMILIARES</h5>
+                            <a href="http://132.248.44.93:9090/PIIANI/INFOPADRES/" target="_blank" class="btnAzul">Ver
+                                información</a>
+                        </div>
+                        <div class="card-footer text-body-secondary">
+                            <span style="color: #ff4564;"><b>ACTIVIDAD PERMANENTE</b></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <!--Card recorrido virtual de la FES-->
+                    <div class="card text-center cardActividades">
+                        <div class="card-header" style="background-color: #00c4cc;">
+                            <i class="bi bi-7-circle-fill" style="font-size: 3rem; color: #ffffff;"></i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title" style="margin-bottom: 20px;">RECORRIDO VIRTUAL DE LA FES ARAGÓN</h5>
+                            <a class="btnAzul" role="button" data-bs-toggle="modal"
+                                data-bs-target="#RecorridoVirtual">Ver recorrido</a>
+                        </div>
+                        <div class="card-footer text-body-secondary">
+                            <span style="color: #ff4564;"><b>ACTIVIDAD PERMANENTE</b></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <!--Botón de dudas-->
+            <div class="row justify-content-center">
+                <div class="col-5 text-center align-self-center">
+                    <a role="button" data-bs-toggle="modal" data-bs-target="#DudasInduccion">
+                        <div class="btnDudas">
+                            <span>
+                                <strong>Dudas relacionadas con las actividades de inducción</strong>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <hr />
+            <div class="row justify-content-center" style="text-align: center;">
+                <div class="col-12 col-xl-8 col-xxl-8">
+                    <!-- Título principal -->
+                    <div
+                        style="background: #243ead; border-radius: 10px; padding: 15px; margin-bottom: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                        <h2 style="font-size: 28px; margin: 0; color: white; font-weight: 700;">
+                            DESCARGA DE HORARIOS DE ASISTENCIA
+                        </h2>
+                    </div>
+
+                    <!-- Mensaje informativo -->
+                </div>
+            </div>
+
+            <!-- Sección de horarios -->
+            <div class="row justify-content-center" style="text-align: center;">
+                <div class="col-12 col-xl-8 col-xxl-8">
+                    <h2 style="font-size: 24px;"><b><strong><span style="color: #243ead;">DESCARGA DE HORARIOS DE
+                                    ASISTENCIA</span></strong></b></h2>
+                    <p><b>Consulta el horario, fecha y salón al que deberás de acudir a la Facultad para recibir
+                            indicaciones de la Jefatura de Carrera a la que estás asignado/a:</b></p>
+                    <div
+                        style="background-color: #f8f9fa; border-radius: 10px; padding: 1.5rem; margin-bottom: 1.5rem; border-left: 4px solid #e74c3c;">
+                        <p style="color: #e74c3c; font-weight: 900; margin-bottom: 0.5rem; font-size: 1.1rem;">
+                            <i class="bi bi-exclamation-triangle-fill"></i> Mensaje importante <i
+                                class="bi bi-exclamation-triangle-fill"></i>
+                        </p>
+                        <p style="color: #34495e; font-weight: 600; margin-bottom: 0;">
+                            Los cronogramas se estarán actualizando constantemente en los próximos días.<br>
+                            Por favor mantente atento a las novedades.
+                        </p>
+                    </div>
+
+                    <div id="accordion-1" class="accordion" role="tablist">
+
+
+                        <div class="accordion-item" style="box-shadow: 0px 0px;margin-bottom: 14px;">
+                            <h2 class="accordion-header" role="tab">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#item-1" aria-expanded="false" aria-controls="item-1"
+                                    style="background: #243ead;border-radius: 5px;box-shadow: 0px 0px 2px 1px rgb(0,0,0);border: none;">
+                                    <strong><span style="color: rgb(255, 255, 255);">División de Ciencias
+                                            Sociales</span></strong>
+                                </button>
+                            </h2>
+                            <div id="item-1" class="accordion-collapse collapse" role="tabpanel"
+                                data-bs-parent="#accordion-1" style="box-shadow: 0px 0px 2px 1px;border-radius: 4px;">
+                                <div class="accordion-body">
+                                    <p>Dar click en la imagen de tu carrera para descargar el cronograma individual</p>
+                                    <div
+                                        class="row gx-0 gy-0 row-cols-1 row-cols-md-2 row-cols-lg-3 justify-content-center">
+                                        <div class="col colHover"><a href="doc/CRONOGRAMAS 20261/DER.pdf"
+                                                target="_blank"><img
+                                                    src="img/Imagotipos SVG/División Sociales/Derecho Negro-02.svg"
+                                                    width="250" /></a></div><!-- Derecho -->
+                                        <div class="col colHover"><a href="doc/CRONOGRAMAS 20261/ECO.pdf"
+                                                target="_blank"><img
+                                                    src="img/Imagotipos SVG/División Sociales/Economía Negro-02.svg"
+                                                    width="250" /></a></div><!-- Economía -->
+                                        <div class="col colHover"><a href="doc/CRONOGRAMAS 20261/PDA.pdf"
+                                                target="_blank"><img
+                                                    src="img/Imagotipos SVG/División Sociales/PDA Negro-02.svg"
+                                                    width="250" /></a></div><!-- PDA -->
+                                        <div class="col colHover"><a href="doc/CRONOGRAMAS 20261/RRII.pdf"
+                                                target="_blank"><img
+                                                    src="img/Imagotipos SVG/División Sociales/Relaciones Internacionales Negro-02.svg"
+                                                    width="250" /></a><!-- Relaciones Internacionales -->
+                                        </div>
+                                        <div class="col colHover"><a href="doc/CRONOGRAMAS 20261/CYP.pdf"
+                                                target="_blank"><img
+                                                    src="img/Imagotipos SVG/División Sociales/Comunicación y Periodismo Negro-02.svg"
+                                                    width="250" /></a><!-- Comunicación y Periodismo -->
+                                        </div>
+                                        <div class="col colHover">
+                                            <a href="doc/CRONOGRAMAS 20261/SOC.pdf" target="_blank">
+                                                <img src="img/Imagotipos SVG/División Sociales/Sociología Negro-02.svg"
+                                                    width="250" />
+                                            </a><!-- Sociología -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item" style="box-shadow: 0px 0px;margin-bottom: 14px;">
+                            <h2 class="accordion-header" role="tab">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#item-2" aria-expanded="false" aria-controls="item-2"
+                                    style="background: #243ead;border-radius: 5px;box-shadow: 0px 0px 2px 1px rgb(0,0,0);border: none;">
+                                    <strong><span style="color: rgb(255, 255, 255);">División de Humanidades y
+                                            Artes</span></strong>
+                                </button>
+                            </h2>
+                            <div id="item-2" class="accordion-collapse collapse" role="tabpanel"
+                                data-bs-parent="#accordion-1" style="box-shadow: 0px 0px 2px 1px;border-radius: 4px;">
+                                <div class="accordion-body">
+                                    <p>Dar click en la imagen de tu carrera para descargar el cronograma individual</p>
+                                    <div
+                                        class="row gx-0 gy-0 row-cols-1 row-cols-md-2 row-cols-lg-3 justify-content-center">
+                                        <div class="col colHover"><a href="doc/CRONOGRAMAS 20261/ARQ.pdf"
+                                                target="_blank"><img
+                                                    src="img/Imagotipos SVG/División Humanidades/Arquitectura Negro-02.svg"
+                                                    width="250" /></a></div><!-- Arquitectura -->
+                                        <div class="col colHover"><a href="doc/CRONOGRAMAS 20261/DIS.pdf"
+                                                target="_blank"><img
+                                                    src="img/Imagotipos SVG/División Humanidades/Diseño Industrial Negro-02.svg"
+                                                    width="250" /></a></div><!-- Diseño Industrial -->
+                                        <div class="col colHover"><a href="doc/CRONOGRAMAS 20261/PED.pdf"
+                                                target="_blank"><img
+                                                    src="img/Imagotipos SVG/División Humanidades/Pedagogía Negro-02.svg"
+                                                    width="250" /></a></div><!-- Pedagogía -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="accordion-item" style="box-shadow: 0px 0px;margin-bottom: 14px;">
+                            <h2 class="accordion-header" role="tab">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#item-3" aria-expanded="false" aria-controls="item-3"
+                                    style="background: #243ead;border-radius: 5px;box-shadow: 0px 0px 2px 1px rgb(0,0,0);border: none;">
+                                    <strong><span style="color: rgb(255, 255, 255);">División de Ciencias
+                                            Fisico-Matematicas</span></strong>
+                                </button>
+                            </h2>
+                            <div id="item-3" class="accordion-collapse collapse" role="tabpanel"
+                                data-bs-parent="#accordion-1" style="box-shadow: 0px 0px 2px 1px;border-radius: 4px;">
+                                <div class="accordion-body">
+                                    <p>Dar click en la imagen de tu carrera para descargar el cronograma individual</p>
+                                    <div
+                                        class="row gx-0 gy-0 row-cols-1 row-cols-md-2 row-cols-lg-3 justify-content-center">
+                                        <div class="col colHover"><a href="doc/CRONOGRAMAS 20261/ICO.pdf"
+                                                target="_blank"><img
+                                                    src="img/Imagotipos SVG/División Ingenerías/ICO Negro-02.svg"
+                                                    width="250" /></a></div><!-- ICO -->
+                                        <div class="col colHover"><a href="doc/CRONOGRAMAS 20261/ICI.pdf"
+                                                target="_blank"><img
+                                                    src="img/Imagotipos SVG/División Ingenerías/Ing Civil Negro-02.svg"
+                                                    width="250" /></a></div><!-- Ing Civil -->
+                                        <div class="col colHover"><a href="doc/CRONOGRAMAS 20261/IEE.pdf"
+                                                target="_blank"><img
+                                                    src="img/Imagotipos SVG/División Ingenerías/Ing Eléctrica Electrónica Negro-02.svg"
+                                                    width="250" /></a><!--Ing Eléctrica Electrónica-->
+                                        </div>
+                                        <div class="col colHover"><a href="doc/CRONOGRAMAS 20261/IID.pdf"
+                                                target="_blank"><img
+                                                    src="img/Imagotipos SVG/División Ingenerías/Ing Industrial Negro-02.svg"
+                                                    width="250" /></a></div><!-- Ing Industrial -->
+                                        <div class="col colHover"><a href="doc/CRONOGRAMAS 20261/IMC.pdf"
+                                                target="_blank"><img
+                                                    src="img/Imagotipos SVG/División Ingenerías/Ing Mecánica Negro-02.svg"
+                                                    width="250" /></a></div><!-- Ing Mecánica -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item" style="box-shadow: 0px 0px;margin-bottom: 14px;">
+                            <h2 class="accordion-header" role="tab">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#item-4" aria-expanded="false" aria-controls="item-4"
+                                    style="background: #243ead;border-radius: 5px;box-shadow: 0px 0px 2px 1px rgb(0,0,0);border: none;">
+                                    <strong><span style="color: rgb(255, 255, 255);">División del Sistema Universidad
+                                            Abierta y Educación a Distancia</span></strong>
+                                </button>
+                            </h2>
+                            <div id="item-4" class="accordion-collapse collapse" role="tabpanel"
+                                data-bs-parent="#accordion-1" style="box-shadow: 0px 0px 2px 1px;border-radius: 4px;">
+                                <div class="accordion-body">
+                                    <p>Dar click en la imagen de tu carrera para descargar el cronograma individual</p>
+                                    <div
+                                        class="row gx-0 gy-0 row-cols-1 row-cols-md-2 row-cols-lg-3 justify-content-center">
+                                        <div class="col colHover"><a href="doc/CRONOGRAMAS 20261/SUADER.pdf"
+                                                target="_blank"><img
+                                                    src="img/Imagotipos SVG/SUAyED/Derecho SUAyED negro-02.svg"
+                                                    width="250" /></a></div>
+                                        <div class="col colHover"><a href="doc/CRONOGRAMAS 20261/SUAECO.pdf"
+                                                target="_blank"><img
+                                                    src="img/Imagotipos SVG/SUAyED/Economía SUAyED negro-02.svg"
+                                                    width="250" /></a></div>
+                                        <div class="col colHover"><a href="doc/CRONOGRAMAS 20261/SUARRII.pdf"
+                                                target="_blank"><img
+                                                    src="img/Imagotipos SVG/SUAyED/R I  SUAyED negro-02.svg"
+                                                    width="250" /></a></div>
+                                    </div>
+                                    <!-- <div class="row justify-content-center" style="padding-top: 16px;">
+                                        <div class="col-6">
+                                            <a href="" target="_blank">
+                                                <div class="btnHorarios">
+                                                    <span><strong>Ver Cronograma conjunto</strong></span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+
+            <!--Mapa de la FES-->
+            <div class="row row-cols-1">
+                <div class="col">
+                    <h2 style="text-align: center;font-size: 24px;"><b><strong>MAPA DE LA FES ARAGÓN</strong></b></h2>
+                </div>
+                <div class="col">
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col-6"><img src="img/MAPA FES ARAGÓN.png" style="width: 100%;height: auto;"
+                                height="100%" /></div>
+
+                        <div class="col-6">
+                            <div class="table-responsive text-center">
+                                <br>
+                                <table class="table table-sm text-center">
+                                    <thead>
+                                        <tr>
+                                            <th>NOMENCLATURA</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-center" style="font-size: 13px;">
+                                        <tr>
+                                            <td>G: Gobierno/División de Ciencias Sociales/División de Humanidades y
+                                                Artes</td>
+                                        </tr>
+                                        <tr>
+                                            <td>CIL: Comunicación Social/División de Ciencias Físico-Matemáticas y de
+                                                las Ingenierías/Aulas de Centro Lenguas</td>
+                                        </tr>
+                                        <tr>
+                                            <td>DUACyD: División de Universidad Abierta, Continua y a Distancia</td>
+                                        </tr>
+                                        <tr>
+                                            <td>B: Biblioteca José Vasconcelos</td>
+                                        </tr>
+                                        <tr>
+                                            <td>CIMA: Centro de Investigación Multidisciplinaria Aragón</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ICA: Innovation Center Aragón</td>
+                                        </tr>
+                                        <tr>
+                                            <td>CTA: Centro Tecnológico Aragón</td>
+                                        </tr>
+                                        <tr>
+                                            <td>CISE: Centro Integral de Servicios Escolares</td>
+                                        </tr>
+                                        <tr>
+                                            <td>SUM: Salón Usos Múltiples</td>
+                                        </tr>
+                                        <tr>
+                                            <td>JV: Teatro José Vasconcelos</td>
+                                        </tr>
+                                        <tr>
+                                            <td>E: Extensión Universitaria</td>
+                                        </tr>
+                                        <tr>
+                                            <td>CO: Clínica Odontológica</td>
+                                        </tr>
+                                        <tr>
+                                            <td>CC: Centro de Cómputo</td>
+                                        </tr>
+                                        <tr>
+                                            <td>AD: Anexo de Derecho</td>
+                                        </tr>
+                                        <tr>
+                                            <td>SM: Servicio Médico</td>
+                                        </tr>
+                                        <tr>
+                                            <td>L: Laboratorios</td>
+                                        </tr>
+                                        <tr>
+                                            <td>A: Aulas</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!--MODALES-->
+
+        <!--Modal para inscripcion-->
+        <div id="Inscripcion" class="modal fade text-center" role="dialog" tabindex="-1">
+            <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h6 class="modal-title"><strong><span style="color: rgb(9, 64, 119);">INFORMACIÓN PARA ALUMNOS Y
+                                    ALUMNAS DE NUEVO INGRESO GENERACIÓN 2026</span></strong></h6><button
+                            class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-2 col-xl-2"><img src="img/LOGO UNAM OSCURO.png" width="50" height="60" />
+                            </div>
+                            <div class="col-8">
+                                <h5 style="font-size: 20px;">FACULTAD DE ESTUDIOS SUPERIORES
+                                    ARAGÓN<br /><br />SECRETARÍA ACADÉMICA<br />DEPARTAMENTO DE SERVICIOS ESCOLARES</h5>
+                            </div>
+                            <div class="col-2"><img src="img/FES_Aragon_oscuro.png" width="50" height="60" /></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p>¡Enhorabuena!</p>
+                                <p class="text-start">A partir de ahora te integras a la comunidad universitaria y nos
+                                    congratulamos de saber que formas parte de esta Facultad.<br />Deberás tener
+                                    preparados los siguientes documentos para iniciar tu <b>inscripción:</b></p>
+                                <ul class="text-start" style="margin-top: -10px;">
+                                    <li>Carta de asignación firmada (marcada como <b><a role="button"
+                                                data-bs-toggle="modal" data-bs-target="#CartaPlantel"
+                                                style="color: #1773fc;text-decoration: underline; ">PLANTEL</a></b>)
+                                    </li>
+                                    <li>Carta Compromiso (<b><a href="doc/CARTA_COMPROMISO_GEN_2026-1.pdf"
+                                                target="_blank"
+                                                style="color: #1773fc;text-decoration: underline; ">descarga</a></b>,
+                                        llena y firma)</li>
+                                    <li>Comprobante de aportación voluntaria</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row justify-content-center">
+                            <div class="col-8">
+                                <p><strong>ES INDISPENSABLE QUE EL DÍA DE LA INSCRIPCIÓN LOS DOCUMENTOS SE ENCUENTREN EN
+                                        ORDEN.</strong></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p class="text-start"><br />La entrega de documentación incompleta y/o apócrifa,
+                                    cancelará el trámite y se procederá conforme a lo establecido en la legislación
+                                    universitaria.</p>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-8">
+                                <p><br /><span style="color: #0b4b8b;">Si tienes alguna duda o aclaración con tu
+                                        inscripción:</span><br /><span style="color: #0b4b8b;">Atención de lunes a
+                                        viernes 9:00 a 20:00 hrs. al correo electrónico:
+                                    </span><strong><a href="mailto:serviciosescolares@aragon.unam.mx"><span
+                                                style="color: #0b4b8b;">serviciosescolares@aragon.unam.mx</span></a></strong>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col"><a href="https://www.aragon.unam.mx/fes-aragon/#!/cise/servicios-escolares"
+                                    target="_blank" style="color: #1773fc;text-decoration: underline; ">Página de
+                                    servicios escolares de la FES Aragón</a></div>
+                        </div>
+                    </div>
+                    <div class="modal-footer"><button class="btn btn-outline-dark" type="button"
+                            data-bs-dismiss="modal">Cerrar</button></div>
+                </div>
+            </div>
+        </div>
+
+        <!--Modal Curpi-->
+        <!--Modal Curpi-->
+        <div id="Curpi" class="modal fade text-center" role="dialog" tabindex="-1">
+            <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h6 class="modal-title">
+                            <strong><span style="color: rgb(9, 64, 119);">
+                                    CÉDULA ÚNICA DE REGISTRO PARA ALUMNAS Y ALUMNOS DE NUEVO INGRESO
+                                </span></strong>
+                        </h6>
+                        <button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-2">
+                                <img src="img/LOGO UNAM OSCURO.png" width="50" height="60" />
+                            </div>
+                            <div class="col-8">
+                                <h5 style="font-size: 20px;">
+                                    FACULTAD DE ESTUDIOS SUPERIORES ARAGÓN<br><br><br>
+                                    CÉDULA ÚNICA DE REGISTRO DE ALUMNAS Y ALUMNOS DE NUEVO INGRESO
+                                </h5>
+                            </div>
+                            <div class="col-2">
+                                <img src="img/FES_Aragon_oscuro.png" width="50" height="60" />
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <br>
+                                <p class="text-start text-justify">
+                                    Formulario para recabar información relevante para apoyar tu trayectoria escolar.
+                                    El llenado de esta cédula <b>no sustituye la inscripción</b>, el cual es un trámite
+                                    que se realiza del <b>30 de julio al 1 de septiembre del 2025</b>.
+                                </p>
+                                <p class="text-start"><b>Tiempo de realización:</b> 20 minutos aproximadamente</p>
+                                <p class="text-start">Instrucciones:</p>
+                                <ol style="margin-top: -10px;">
+                                    <li class="text-start">
+                                        Accede a la liga del registro del formulario
+                                        <a href="http://132.248.44.93:9090/CURPI" target="_blank"
+                                            style="color: #1773fc; text-decoration: underline;">
+                                            Cédula de Registro
+                                        </a>
+                                    </li>
+                                    <li class="text-start">
+                                        Una vez en el inicio de la página, da clic en el botón verde <b>"Crear
+                                            cuenta"</b>.
+                                        <br><br>
+                                        <img src="img/paso 2 - curpi.jpeg" alt="Paso 2" class="img-fluid" width="300px">
+                                    </li>
+                                    <li class="text-start">
+                                        Llena el pequeño formulario para la creación de cuenta con tus datos y <b>¡no se
+                                            te olviden los datos registrados como correo y contraseña!</b>
+                                        <br><br>
+                                        <img src="img/paso 3 - curpi.jpeg" alt="Paso 3" class="img-fluid" width="300px">
+                                    </li>
+                                    <li class="text-start">
+                                        Una vez llenes el formulario, da clic en el botón verde <b>"Guardar Alumno"</b>;
+                                        se cerrará la ventana emergente, y podrás iniciar sesión con tu correo y
+                                        contraseña registrados.
+                                        <br><br>
+                                        <img src="img/paso 4 - curpi.jpeg" alt="Paso 4" class="img-fluid" width="300px">
+                                    </li>
+                                    <li class="text-start">
+                                        Una vez ingreses, el formulario constará de <b>9 secciones</b> diferentes que
+                                        deberás contestar con honestidad.
+                                        <br><br>
+                                        <img src="img/paso 5 - curpi.jpeg" alt="Paso 5" class="img-fluid" width="300px">
+                                    </li>
+                                    <li class="text-start">
+                                        Una vez termines de contestar todas las preguntas solicitadas, da clic en el
+                                        botón verde <b>"Finalizar"</b>.
+                                        <br><br>
+                                        <img src="img/paso 6 - curpi.jpeg" alt="Paso 6" class="img-fluid" width="300px">
+                                    </li>
+                                    <li class="text-start">
+                                        Finalmente, se te redireccionará a una página con un mensaje de <b>¡éxito!</b> y
+                                        con eso será suficiente.
+                                        <br><br>
+                                        <img src="img/paso 7 - curpi.jpeg" alt="Paso 7" class="img-fluid" width="300px">
+                                    </li>
+                                    <li class="text-start" style="color: #ff4564;">
+                                        El formulario forzosamente debe enviar el mensaje de éxito al final, tras llenar
+                                        el
+                                        cuestionario, en caso de no hacerlo es por algún problema de inactividad en el
+                                        desarrollo del mismo o un mayor tiempo prolongado.
+                                        <br><br>
+                                    </li>
+                                </ol>
+
+                                <p class="text-start" style="color: #ff4564;">Para verificar que el formulario fue
+                                    llenado, puede volver a
+                                    ingresar con el correo y contraseña y si nuevamente lo redirige al mensaje de éxito,
+                                    significa que todo esta correcto</p>
+
+                                <p class="mt-4 text-start"><b>Preguntas frecuentes:</b></p>
+
+                                <p class="text-start"><b>¿Cómo doy por terminado el llenado del formulario?</b></p>
+                                <ul>
+                                    <li class="text-start">
+                                        Al finalizar todas las secciones, debes dar clic en el botón <b>"Finalizar"</b>.
+                                        Esto enviará la información al sistema de la Facultad y quedará registrada
+                                        oficialmente.
+                                    </li>
+                                </ul>
+
+                                <div class="row justify-content-center">
+                                    <div class="col-8 mt-3">
+                                        <p>
+                                            <span style="color: #0b4b8b;">
+                                                Si tienes algún problema, duda o aclaración con esta actividad, envía un
+                                                correo electrónico a:
+                                            </span><br>
+                                            <strong>
+                                                <a href="mailto:planeacion.enlace7@aragon.unam.mx"
+                                                    style="color: #0b4b8b;">
+                                                    planeacion.enlace7@aragon.unam.mx
+                                                </a>
+                                            </strong>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <p class="mt-4"><strong>Gracias y bienvenida(o)s al semestre 2026 - 1</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-outline-dark" type="button" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Modal Correo aragon-->
+        <div id="CorreoAragon" class="modal fade text-center" role="dialog" tabindex="-1">
+            <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h6 class="modal-title"><strong><span style="color: rgb(9, 64, 119);">CORREO ELECTRÓNICO
+                                    @aragon.unam.mx</span></strong></h6><button class="btn-close" type="button"
+                            aria-label="Close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-2 col-xl-2"><img src="img/LOGO UNAM OSCURO.png" width="50" height="60" />
+                            </div>
+                            <div class="col-8">
+                                <h5 style="font-size: 20px;">FACULTAD DE ESTUDIOS SUPERIORES ARAGÓN
+                                    <br /><br />
+                                    CORREO: @ARAGON
+                                </h5>
+                            </div>
+                            <div class="col-2"><img src="img/FES_Aragon_oscuro.png" width="50" height="60" /></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <br>
+                                <h6 style="color: ff476c;">IMPORTANTE</h6>
+                                <h6>Solicita tu cuenta, posterior al trámite de inscripción</h6>
+                                <br>
+                                <p><b>Es necesario que tengas acceso a tu correo institucional @aragon.unam.mx ya que te
+                                        permitirá concluir tus actividades de inducción y asesorías de tu carrera.</b>
+                                </p>
+                                <p class="text-start">Para tramitar tu cuenta @aragon.unam.mx sigue los siguientes
+                                    pasos:</p>
+                                <ol style="margin-top: -10px;">
+                                    <li class="text-start">
+                                        Accede a la siguiente liga:
+                                        <br>
+                                        <a href="https://plataformaeducativa.aragon.unam.mx/cuentas/" target="_blank"
+                                            style="font-size: medium; color: #1773fc;">plataformaeducativa.aragon.unam.mx/cuentas</a>
+                                    </li>
+                                    <li class="text-start">Da click en 'ALUMNO'</li>
+                                    <li class="text-start">
+                                        Proporciona tu número de cuenta y fecha de nacimiento
+                                        <br>
+                                        Utiliza el calendario emergente para ubicar tu fecha de nacimiento y que se
+                                        ingrese en el formato indicado:
+                                    </li>
+                                    <br>
+                                    <img src="img/PEd1.JPG" alt="" width="300px">
+                                    <br><br>
+                                    <li class="text-start">Continúa con las instrucciones de la plataforma</li>
+                                </ol>
+                                <p>Preguntas frecuentes:</p>
+                                <p class="text-start"><b>¿A partir de cuándo puedo tramitar mi correo?</b></p>
+                                <ul>
+                                    <li class="text-start">Los trámites para el correo institucional estarán disponibles
+                                        a partir de las 12:00 h del día siguiente a tu inscripción.</li>
+                                </ul>
+                                <p class="text-start"><b>Cuando ingreso mi número de cuenta me sale error ¿Por qué no
+                                        puedo tramitar mi correo?</b></p>
+                                <ul>
+                                    <li class="text-start">Para poder tramitar tu correo necesitas haberte inscrito en
+                                        el plantel y esperar 24 horas.</li>
+                                </ul>
+                                <p class="text-start"><b>¿Tienes otro tipo de problema?</b></p>
+                                <ul>
+                                    <li class="text-start">Consulta la <a
+                                            href="doc/Preguntas frecuentes del Correo Institucional.pdf"
+                                            target="_blank">Guía de preguntas frecuentes del correo institucional.</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-8">
+                                <p>
+                                    <span style="color: #0b4b8b;">Si tienes algún problema, duda o aclaración con la
+                                        contraseña de tu cuenta <span><b>@aragon</b></span>, envía un correo a:</span>
+                                    <br>
+                                    <strong><span style="color: #0b4b8b;"><a
+                                                href="mailto:proyectosdevinculacion@aragon.unam.mx">proyectosdevinculacion@aragon.unam.mx</a></span></strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer"><button class="btn btn-outline-dark" type="button"
+                            data-bs-dismiss="modal">Cerrar</button></div>
+                </div>
+            </div>
+        </div>
+
+        <!--Examen diagnostico-->
+        <div id="ExamenDiagnostico" class="modal fade text-center" role="dialog" tabindex="-1">
+            <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h6 class="modal-title"><strong><span style="color: rgb(9, 64, 119);">EXAMEN
+                                    DIAGNÓSTICO</span></strong></h6><button class="btn-close" type="button"
+                            aria-label="Close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-2 col-xl-2"><img src="img/LOGO UNAM OSCURO.png" width="50" height="60" />
+                            </div>
+                            <div class="col-8">
+                                <h5 style="font-size: 20px;">FACULTAD DE ESTUDIOS SUPERIORES ARAGÓN
+                                    <br /><br />
+                                    REALIZA EL EXAMEN DIAGNÓSTICO
+                                </h5>
+                            </div>
+                            <div class="col-2"><img src="img/FES_Aragon_oscuro.png" width="50" height="60" /></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <br>
+                                <p class="text-start">Pasos para que realices el examen diagnóstico:</p>
+                                <ol style="margin-top: -10px;">
+                                    <li class="text-start">Ingresa a la liga: <a
+                                            href="https://exal2-srv10.ceide.unam.mx:8181/exal2-war/faces/index.xhtml"
+                                            target="_blank" style="font-size: medium;">www.examendiagnostico.unam.mx</a>
+                                    </li>
+                                    <li class="text-start">Pulsa el botón de Ingresar al sistema en la pantalla de la
+                                        plataforma.</li>
+                                    <br>
+                                    <img src="img/ED1.JPG" alt="" width="300px">
+                                    <br><br>
+                                    <li class="text-start">Escribe tu número de cuenta, tu fecha de nacimiento en el
+                                        formato día (XX), mes (XX) año (XXXX), selecciona las imágenes que te solicite
+                                        el sistema y pulsa el botón de ingresar.</li>
+                                    <br>
+                                    <img src="img/ED2.JPG" alt="" width="300px">
+                                    <br><br>
+                                    <li class="text-start">Contesta la encuesta y pulsa el botón de enviar y continuar.
+                                    </li>
+                                    <br>
+                                    <img src="img/ED3.JPG" alt="" width="300px">
+                                    <br><br>
+                                    <li class="text-start"><span style="color: #ff4564;"><b>Copia el código que te
+                                                aparecerá en pantalla</b></span>, esté es indispensable para retomar el
+                                        examen en caso de que los suspendas, ya sea por un corte eléctrico o de
+                                        internet.</li>
+                                    <br>
+                                    <img src="img/ED5.JPG" alt="" width="300px">
+                                    <br><br>
+                                    <li class="text-start">Acepta los términos de monitoreo del examen y pulsa
+                                        siguiente.</li>
+                                    <br>
+                                    <img src="img/ED4.JPG" alt="" width="300px">
+                                    <br><br>
+                                    <li class="text-start">Lee las instrucciones del examen y pulsa el botón de
+                                        continuar.</li>
+                                    <li class="text-start">Comienza a contestar el examen. El primer examen que
+                                        contestarás es el de conocimientos.</li>
+                                    <li class="text-start">Elige la respuesta que consideres correcta y pulsa siguiente
+                                        para avanzar. Tus respuestas se graban de forma automática. Si tienes alguna
+                                        duda, pulsa la opción para verificar posteriormente, así podrás cambiar tu
+                                        respuesta más adelante si así lo decides.</li>
+                                    <li class="text-start">Revisa la o las preguntas pendientes y actualizar.</li>
+                                    <br>
+
+                                    <img src="img/ED6.JPG" alt="" width="300px">
+                                    <br><br>
+                                    <li class="text-start">Pulsa el botón de Finalizar examen.</li>
+                                    <li class="text-start">La siguiente ocasión que entres al sistema podrás contestar
+                                        el examen de español e inglés siguiendo los pasos anteriores.</li>
+                                </ol>
+                                <p class="text-start"><span><b>*NOTA:</b></span> El examen debe realizarse en una
+                                    computadora de escritorio o laptop, por el momento no está disponible para
+                                    dispositivos móviles como tabletas, o celulares.</p>
+                                <p>Preguntas frecuentes:</p>
+                                <p class="text-start"><b>¿Qué pasa si me desconecta o me saca de la prueba?</b></p>
+                                <ul>
+                                    <li class="text-start">Puedes volver a tu sesión ingresando el código que se generó
+                                        en el paso 5</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-8">
+                                <p>
+                                    <span style="color: #0b4b8b;">Si tienes algún problema, duda o aclaración con esta
+                                        actividad, envía un correo a:</span>
+                                    <br>
+                                    <strong><span style="color: #0b4b8b;"><a
+                                                href="mailto:proyectosdevinculacion@aragon.unam.mx">nuevoingreso@aragon.unam.mx</a></span></strong>
+                                    <span style="color: #0b4b8b;">con asunto 'Diagnóstico '</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer"><button class="btn btn-outline-dark" type="button"
+                            data-bs-dismiss="modal">Cerrar</button></div>
+                </div>
+            </div>
+        </div>
+
+        <!--Examen EMA Escolarizado-->
+        <div id="EMAEscolarizado" class="modal fade text-center" role="dialog" tabindex="-1">
+            <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h6 class="modal-title"><strong><span style="color: rgb(9, 64, 119);">EMA
+                                    ESCOLARIZADO</span></strong></h6><button class="btn-close" type="button"
+                            aria-label="Close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-2 col-xl-2"><img src="img/LOGO UNAM OSCURO.png" width="50" height="60" />
+                            </div>
+                            <div class="col-8">
+                                <h5 style="font-size: 20px;">FACULTAD DE ESTUDIOS SUPERIORES
+                                    ARAGÓN<br /><br />SECRETARÍA ACADÉMICA<br />DEPARTAMENTO DE SERVICIOS ESCOLARES</h5>
+                            </div>
+                            <div class="col-2"><img src="img/FES_Aragon_oscuro.png" width="50" height="60" /></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p>¡Enhorabuena!</p>
+                                <p class="text-start">A partir de ahora te integras a la comunidad universitaria y nos
+                                    congratulamos de saber que formas parte de esta Facultad.<br />Deberás tener
+                                    preparados los siguientes documentos para iniciar tu inscripción:</p>
+                                <ul class="text-start" style="margin-top: -10px;">
+                                    <li>Carta de asignación firmada (marcada como PLANTEL)</li>
+                                    <li>Carta Compromiso (descarga, llena y firma)</li>
+                                    <li>Comprobante de aportación voluntaria</li>
+                                    <li>CURP</li>
+                                    <li>Original y Copia de tu Identificación con fotografía y firma, por ambos lados
+                                        (INE, pasaporte, licencia para conducir, credencial de bachillerato)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-8">
+                                <p><strong>ES INDISPENSABLE QUE EL DÍA DE LA INSCRIPCIÓN LOS DOCUMENTOS SE ENCUENTREN EN
+                                        ORDEN.</strong></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p class="text-start"><br />La entrega de documentación incompleta y/o apócrifa,
+                                    cancelará el trámite y se procederá conforme a lo establecido en la legislación
+                                    universitaria.</p>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-8">
+                                <p><br /><span style="color: rgb(11, 75, 139);">Si tienes alguna duda o aclaración con
+                                        tu inscripción:</span><br /><span style="color: rgb(11, 75, 139);">Atención de
+                                        lunes a viernes 9:00 a 20:00 h al correo electrónico </span><strong><span
+                                            style="color: rgb(11, 75, 139);">serviciosescolares@aragon.unam.mx</span></strong>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col"><a href="#">Página de servicios escolares de la FES Aragón</a></div>
+                        </div>
+                    </div>
+                    <div class="modal-footer"><button class="btn btn-outline-dark" type="button"
+                            data-bs-dismiss="modal">Cerrar</button></div>
+                </div>
+            </div>
+        </div>
+
+        <!--Ticometro-->
+        <div id="Ticometro" class="modal fade text-center" role="dialog" tabindex="-1">
+            <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h6 class="modal-title"><strong><span style="color: rgb(9, 64, 119);">TICómetro</span></strong>
+                        </h6><button class="btn-close" type="button" aria-label="Close"
+                            data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-2 col-xl-2"><img src="img/LOGO UNAM OSCURO.png" width="50" height="60" />
+                            </div>
+                            <div class="col-8">
+                                <h5 style="font-size: 20px;">FACULTAD DE ESTUDIOS SUPERIORES ARAGÓN
+                                    <br /><br />
+                                    REALIZA EL FORMULARIO DEL
+                                    <br>
+                                    TICÓMETRO
+                                </h5>
+                            </div>
+                            <div class="col-2"><img src="img/FES_Aragon_oscuro.png" width="50" height="60" /></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <br>
+                                <P class="text-start">El TICómetro es una prueba para que conozcas el nivel de dominio
+                                    que tienes de las herramientas tecnológicas y de información,
+                                    <span style="color: #ff4564;">es importante que realices esta actividad en una
+                                        computadora de escritorio o laptop</span>, puesto que algunas preguntas son
+                                    complicadas de responder en teléfonos celulares o tabletas.
+                                    <br>Para realizarlo sigue los siguientes pasos:
+                                </P>
+                                <ol style="margin-top: -10px;">
+                                    <li class="text-start">Ingresa al sitio web del
+                                        <a href="https://ticometro.educatic.unam.mx/" target="_blank"
+                                            style="font-size: large;">ticometro.educatic.unam.mx</a>
+                                    </li>
+                                    <li class="text-start">Identifícate utilizando tus credenciales</li>
+                                    <br>
+                                    <p style="font-size: 15px;">
+                                        <b style="color: #ff4564;">CAMPOS QUE SE SOLICITAN:</b><br>
+                                        Número de cuenta<br>
+                                        Fecha de nacimiento<br><br>
+                                    </p>
+                                    <img src="img/TIC1.JPG" alt="" width="400px">
+                                    <br><br>
+                                    <li class="text-start">Sigue las instrucciones del sitio para contestar las
+                                        preguntas</li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-8">
+                                <p>
+                                    <span style="color: #0b4b8b;">Si tienes algún problema, duda o aclaración con esta
+                                        actividad, envía un correo a:</span>
+                                    <br>
+                                    <strong><span style="color: #0b4b8b;"><a
+                                                href="mailto:nuevoingreso@aragon.unam.mx">nuevoingreso@aragon.unam.mx</a></span></strong>
+                                    <span style="color: #0b4b8b;">con asunto 'TICómetro'</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer"><button class="btn btn-outline-dark" type="button"
+                            data-bs-dismiss="modal">Cerrar</button></div>
+                </div>
+            </div>
+        </div>
+
+        <!--Gestion de seguro-->
+        <div id="SeguroSalud" class="modal fade text-center" role="dialog" tabindex="-1">
+            <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h6 class="modal-title"><strong><span style="color: rgb(9, 64, 119);">SEGURO DE
+                                    SALUD</span></strong></h6><button class="btn-close" type="button" aria-label="Close"
+                            data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-2 col-xl-2"><img src="img/LOGO UNAM OSCURO.png" width="50" height="60" />
+                            </div>
+                            <div class="col-8">
+                                <h5 style="font-size: 20px;">FACULTAD DE ESTUDIOS SUPERIORES ARAGÓN
+                                    <br /><br />
+                                    GESTIONA TU
+                                    <br>
+                                    SEGURO DE SALUD DEL ESTUDIANTE
+                                </h5>
+                            </div>
+                            <div class="col-2"><img src="img/FES_Aragon_oscuro.png" width="50" height="60" /></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <br>
+                                <p class="text-start">A partir de ahora te integras a la comunidad universitaria y como
+                                    parte de ella tienes derecho a gestionar tu seguro de salud.</p>
+                                <p><b>Alta en clínica</b></p>
+                                <video src="doc/Videos/Alta en clinica.mp4" controls width="100%" height="auto">
+                                    Tu navegador no admite el elemento <code>video</code>.
+                                </video>
+                                <br><br>
+                                <p><b>Constancia de vigencia de derechos SDP</b></p>
+                                <video src="doc/Videos/Constancia de vigencia de derechos SDP.mp4" controls width="100%"
+                                    height="auto">
+                                    Tu navegador no admite el elemento <code>video</code>.
+                                </video>
+                            </div>
+                        </div>
+                        <br><br>
+                    </div>
+                    <div class="modal-footer"><button class="btn btn-outline-dark" type="button"
+                            data-bs-dismiss="modal">Cerrar</button></div>
+                </div>
+            </div>
+        </div>
+
+        <!--Recorrido virtual-->
+        <div id="RecorridoVirtual" class="modal fade text-center" role="dialog" tabindex="-1">
+            <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h6 class="modal-title"><strong><span style="color: rgb(9, 64, 119);">RECORRIDO
+                                    VIRTUAL</span></strong></h6><button class="btn-close" type="button"
+                            aria-label="Close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-2 col-xl-2"><img src="img/LOGO UNAM OSCURO.png" width="50" height="60" />
+                            </div>
+                            <div class="col-8">
+                                <h5 style="font-size: 20px;">FACULTAD DE ESTUDIOS SUPERIORES ARAGÓN
+                                    <br /><br />
+                                    CONOCE LA FACULTAD EN SU
+                                    <br />
+                                    RECORRIDO VIRTUAL
+                                </h5>
+                            </div>
+                            <div class="col-2"><img src="img/FES_Aragon_oscuro.png" width="50" height="60" /></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <br>
+                                <p class="text-start">Conoce la Facultad de Estudios Superiores Aragón a través del
+                                    Recorrido Virtual en <a href="https://aragon.unam.mx/mapa/"
+                                        target="_blank">aragon.unam.mx/mapa</a></p>
+                                <p class="text-start">Instrucciones:</p>
+                                <ul style="margin-top: -10px;">
+                                    <li class="text-start">Para comenzar con el recorrido, da click en Inicio</li>
+                                    <br>
+                                    <img src="img/RV1.JPG" alt="" width="400px">
+                                    <br><br>
+                                    <li class="text-start">Avanza dando click en las flechas azules que están en el
+                                        suelo</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer"><button class="btn btn-outline-dark" type="button"
+                            data-bs-dismiss="modal">Cerrar</button></div>
+                </div>
+            </div>
+        </div>
+
+        <!--Dudas de induccion-->
+        <div id="DudasInduccion" class="modal fade text-center" role="dialog" tabindex="-1">
+            <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h6 class="modal-title"><strong><span style="color: rgb(9, 64, 119);">DUDAS Y ACLARACIONES DE
+                                    LAS ACTIVIDADES DE INDUCCIÓN</span></strong></h6><button class="btn-close"
+                            type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-2 col-xl-2"><img src="img/LOGO UNAM OSCURO.png" width="50" height="60" />
+                            </div>
+                            <div class="col-8">
+                                <h5 style="font-size: 20px;">FACULTAD DE ESTUDIOS SUPERIORES ARAGÓN
+                                    <br /><br />
+                                    CONTACTOS PARA DUDAS Y ACLARACIONES
+                                </h5>
+                            </div>
+                            <div class="col-2"><img src="img/FES_Aragon_oscuro.png" width="50" height="60" /></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <br>
+                                <p>Revisa detalladamente la información que se te proporciona en cada apartado, en caso
+                                    de dudas, por favor comunícate con la jefatura de tu carrera</p>
+                                <p><b>Dudas relacionadas con las actividades de cada carrera</b></p>
+                                <p class="text-start">Sistema Universidad Abierta y Educación a Distancia</p>
+                                <ul class="text-start" style="margin-top: -10px;">
+                                    <li>Derecho</li>
+                                    <li>Economía</li>
+                                    <li>Relaciones Internacionales</li>
+                                    <p>Contacto general: <b>suayed.atencion@aragon.unam.mx</b></p>
+                                </ul>
+                                <br>
+
+                                <p class="text-start">División de Humanidades y Artes</p>
+                                <ul class="text-start" style="margin-top: -10px;">
+                                    <li>Arquitectura: <b>arquitectura@aragon.unam.mx</b></li>
+                                    <li>Diseño Industrial: <b>disenoindustrial@aragon.unam.mx</b></li>
+                                    <li>Pedagogía: <b>pedagogia@aragon.unam.mx</b></li>
+                                    <p>Contacto general: <b>humanidades@aragon.unam.mx</b></p>
+                                </ul>
+                                <br>
+                                <p class="text-start">División de Ciencias Físico-Matemáticas y de las Ingenierías</p>
+                                <ul class="text-start" style="margin-top: -10px;">
+                                    <li>Ingeniería Civil: <b>civil@aragon.unam.mx</b></li>
+                                    <li>Ingeniería en Computación: <b>computacion@aragon.unam.mx</b></li>
+                                    <li>Ingeniería Eléctrica Electrónica: <b>electricaelectronica@aragon.unam.mx</b>
+                                    </li>
+                                    <li>Ingeniería Industrial: <b>industrial@aragon.unam.mx</b></li>
+                                    <li>Ingeniería Mecánica: <b>mecanica@aragon.unam.mx</b></li>
+                                    <p>Contacto general: <b>ingenierias@aragon.unam.mx</b></p>
+                                </ul>
+                                <br>
+                                <p class="text-start">División de Ciencias Sociales</p>
+                                <ul class="text-start" style="margin-top: -10px;">
+                                    <li>Comunicación y Periodismo: <b>comunicacion@aragon.unam.mx</b></li>
+                                    <li>Derecho: <b>derecho@aragon.unam.mx</b></li>
+                                    <li>Economía: <b>economia@aragon.unam.mx</b></li>
+                                    <li>Planificación para el Desarrollo Agropecuario:
+                                        <b>planificacion@aragon.unam.mx</b>
+                                    </li>
+                                    <li>Relaciones Internacionales: <b>relacionesinternacionales@aragon.unam.mx</b></li>
+                                    <li>Sociología: <b>sociologia@aragon.unam.mx</b></li>
+                                    <p>Contacto general: <b>sociales@aragon.unam.mx</b></p>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer"><button class="btn btn-outline-dark" type="button"
+                            data-bs-dismiss="modal">Cerrar</button></div>
+                </div>
+            </div>
+        </div>
+
+        <!--Examen EMA Distancia-->
+        <!-- MODAL EMADistancia ACTUALIZADO CON MENSAJE AL INICIO -->
+        <div id="EMADistancia" class="modal fade text-center" role="dialog" tabindex="-1">
+            <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h6 class="modal-title"><strong><span style="color: rgb(9, 64, 119);">
+                                    EXAMEN MÉDICO AUTOMATIZADO MODALIDAD: DISTANCIA</span></strong></h6>
+                        <button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- MENSAJE DESTACADO -->
+                        <div class="alert alert-warning text-start" role="alert"
+                            style="font-size: 1.2rem; font-weight: 700; border-left: 6px solid #ff8800;">
+                            ⚠️ <span style="color: #c0392b;">Importante:</span> Por el momento <u>solo debes crear tu
+                                cuenta</u>.
+                            El llenado del Examen Médico Automatizado (EMA) se realizará de manera presencial en el día
+                            agendado en tu cronograma.
+                        </div>
+
+                        <!-- Encabezado con logos -->
+                        <div class="row">
+                            <div class="col-2 col-xl-2">
+                                <img src="img/LOGO UNAM OSCURO.png" width="50" height="60" />
+                            </div>
+                            <div class="col-8">
+                                <h5 style="font-size: 20px;">
+                                    FACULTAD DE ESTUDIOS SUPERIORES ARAGÓN
+                                    <br><br>REALIZA
+                                    <br>EL EXAMEN MÉDICO AUTOMATIZADO
+                                </h5>
+                            </div>
+                            <div class="col-2">
+                                <img src="img/FES_Aragon_oscuro.png" width="50" height="60" />
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <br>
+                                <p>Puedes contestar el Examen Médico Automatizado a través de un dispositivo conectado a
+                                    internet (Computadora, Tablet o Teléfono Celular Inteligente) siguiendo los
+                                    siguientes pasos:</p>
+                                <ol style="margin-top: -10px;">
+                                    <li class="text-start">
+                                        Completa el siguiente formulario:
+                                        <a href="https://unapdi.unam.mx/registro.php?id=" target="_blank"
+                                            style="font-size: large;">https://unapdi.unam.mx/registro.php</a>
+                                    </li>
+
+                                    <li class="text-start">
+                                        Entra en la página
+                                        <a href="https://app.ema.unam.mx/" target="_blank" style="font-size: large;">
+                                            https://app.ema.unam.mx/</a>
+                                    </li>
+
+                                    <!-- NUEVO BLOQUE: Cartel informativo y QR -->
+                                    <div class="text-center my-4">
+                                        <h6 class="fw-bold mb-3" style="color: #0b4b8b;">Cartel informativo y acceso
+                                            directo</h6>
+                                        <img src="img/cartel_ema_qr.jpeg" alt="Cartel informativo y QR"
+                                            style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                                    </div>
+                                    <!-- FIN NUEVO BLOQUE -->
+
+                                    <li class="text-start">Ingresa tu número de cuenta y fecha de nacimiento</li><br>
+
+                                    <p style="font-size: 15px;">
+                                        <b style="color: #ff4564;">CAMPOS QUE SE SOLICITAN:</b><br>
+                                        Número de cuenta<br>
+                                        Fecha de nacimiento<br><br>
+                                        <b>EJEMPLO</b><br>
+                                        Si tu fecha de nacimiento es el: 1 de junio del 2005<br>
+                                        Debe ingresar: <b>01062005</b><br><br>
+                                        <b>EJEMPLO</b><br>
+                                        Si tu fecha de nacimiento es el: 12 de noviembre del 2000<br>
+                                        Debe ingresar: <b>12112000</b>
+                                    </p>
+
+                                    <img src="img/EMA PORTADA.png" alt="" width="400px">
+                                    <br><br>
+
+                                    <li class="text-start">Se despliega el examen</li>
+                                    <li class="text-start">Empieza a contestar. La duración aproximada del examen es de
+                                        60 min a 90 min</li>
+                                    <li class="text-start">
+                                        Es mejor que lo contestes en una sola sesión de manera continua. Si no es
+                                        posible,
+                                        selecciona guardar para posteriormente volver a entrar y seguir contestando.
+                                    </li>
+                                    <li class="text-start">
+                                        Al terminar <span style="color: #ff4564;">asegúrate de dar click en
+                                            finalizar</span>.
+                                        Una vez finalizado el examen no se pueden realizar cambios.
+                                    </li>
+                                    <li class="text-start">
+                                        Imprime o guarda el comprobante en tu equipo.<br>
+                                        El comprobante tiene el código QR que podrás copiar o guardar.<br>
+                                        Ese será tu comprobante para que continúes con los trámites.
+                                    </li>
+                                </ol>
+
+                                <p>Preguntas frecuentes:</p>
+                                <p class="text-start"><b>¿Qué pasa si me desconecta o me saca del examen?</b></p>
+                                <ul>
+                                    <li class="text-start">Puedes volver a iniciar sesión para continuar con el examen.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="row justify-content-center">
+                            <div class="col-8">
+                                <p>
+                                    <span style="color: #0b4b8b;">Si tienes algún problema, duda o aclaración con esta
+                                        actividad, envía un correo a:</span><br>
+                                    <strong><span style="color: #0b4b8b;">
+                                            <a href="mailto:serviciosalacomunidad@aragon.unam.mx">
+                                                serviciosalacomunidad@aragon.unam.mx</a></span></strong><br>
+                                    <span style="color: #0b4b8b;">con asunto 'Examen Médico Automatizado'</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-outline-dark" type="button" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Modal Carta Plantel-->
+        <div id="CartaPlantel" class="modal fade text-center" role="dialog" tabindex="-1">
+            <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h6 class="modal-title"><strong>
+                                <span style="color: rgb(9, 64, 119);">CARTA DE ASIGNACIÓN PLANTEL
+                                </span></strong></h6><button class="btn-close" type="button" aria-label="Close"
+                            data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-2 col-xl-2"><img src="img/LOGO UNAM OSCURO.png" width="50" height="60" />
+                            </div>
+                            <div class="col-8">
+                                <h5 style="font-size: 20px;">FACULTAD DE ESTUDIOS SUPERIORES
+                                    ARAGÓN<br /><br /><br />CARTA DE ASIGNACIÓN DE PLANTEL</h5>
+                            </div>
+                            <div class="col-2"><img src="img/FES_Aragon_oscuro.png" width="50" height="60" /></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <br>
+                                <p class="text-start text-justify">Recuerda que el día de tu inscripción debes presentar
+                                    la carta de asignación con la leyenda <b>"PLANTEL"</b> en la parte inferior derecha.
+                                </p>
+
+                                <ol style="margin-top: -10px;">
+                                    <br>
+                                    <img src="img/img_carta_plantel.jpeg" alt="" width="700px" class="img-fluid">
+                                    <br><br>
+                                </ol>
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal"
+                            data-bs-target="#Inscripcion">Regresar</button>
+                        <button class="btn btn-outline-dark" type="button" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Modal Aviso Importante A1-->
+        <div class="modal fade" id="AvisoInicio" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content"
+                    style="border: none; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+
+                    <!-- Encabezado con escudos -->
+                    <div class="modal-header position-relative"
+                        style="background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%); color: white; border-bottom: none; padding: 1.5rem;">
+                        <!-- Logo UNAM -->
+                        <div style="position: absolute; left: 20px; top: 50%; transform: translateY(-50%);">
+                            <img src="img/LOGO UNAM BLANCO TRANSPARENTE.png" alt="Escudo UNAM"
+                                style="height: 60px; width: auto; filter: drop-shadow(0 0 5px rgba(255,255,255,0.3));">
+                        </div>
+
+                        <!-- Título -->
+                        <h3 class="modal-title mx-auto"
+                            style="font-weight: 700; font-size: 1.8rem; text-align: center; padding: 0 80px;">
+                            ¡Bienvenidos Generación 2026-1!
+                        </h3>
+
+                        <!-- Logo FES -->
+                        <div style="position: absolute; right: 20px; top: 50%; transform: translateY(-50%);">
+                            <img src="img/FES Aragon blanco transparente.png" alt="Escudo FES"
+                                style="height: 60px; width: auto; filter: drop-shadow(0 0 5px rgba(255,255,255,0.3));">
+                        </div>
+
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+
+                    <!-- Contenido del cuerpo -->
+                    <div class="modal-body text-center" style="padding: 2rem;">
+                        <h4 style="color: #2c3e50; margin-bottom: 1.5rem; font-weight: 600;">
+                            ¡Estamos emocionados de tenerlos con nosotros!
+                        </h4>
+
+                        <!-- Aviso general -->
+                        <div
+                            style="background-color: #f8f9fa; border-radius: 10px; padding: 1.5rem; margin-bottom: 1.5rem; border-left: 4px solid #e74c3c;">
+                            <p style="color: #e74c3c; font-weight: 900; margin-bottom: 0.5rem; font-size: 1.1rem;">
+                                <i class="bi bi-exclamation-triangle-fill"></i> Mensaje importante <i
+                                    class="bi bi-exclamation-triangle-fill"></i>
+                            </p>
+                            <p style="color: #34495e; font-weight: 600; margin-bottom: 0;">
+                                La información se estará actualizando constantemente en los próximos días.<br>
+                                Por favor mantente atento a las novedades.
+                            </p>
+                        </div>
+
+                        <!-- Aviso sobre identificación -->
+                        <div
+                            style="background-color: #fff3cd; border-radius: 10px; padding: 1.5rem; margin-bottom: 1.5rem; border-left: 4px solid #ffcc00;">
+                            <p style="color: #856404; font-weight: 900; margin-bottom: 0.5rem; font-size: 1.1rem;">
+                                <i class="bi bi-person-vcard-fill"></i> Requisito indispensable
+                            </p>
+                            <p style="color: #5a5a5a; font-weight: 600; margin-bottom: 0;">
+                                Recuerda llevar contigo una identificación oficial vigente el día de tus trámites de
+                                inscripción. Es indispensable para poder identificarte correctamente.
+                            </p>
+                        </div>
+
+                        <!-- Imagen demostrativa -->
+                        <div style="margin-bottom: 1.5rem;">
+                            <img src="img/Carteles de identificación oficial.png"
+                                alt="Ejemplo de identificación oficial"
+                                style="max-width: 100%; max-height: 200px; border-radius: 10px;">
+                        </div>
+
+                        <p style="color: #7f8c8d; font-style: italic; margin-bottom: 0;">
+                            "El éxito es la suma de pequeños esfuerzos repetidos día tras día"
+                        </p>
+                    </div>
+
+                    <!-- Pie del modal -->
+                    <div class="modal-footer" style="border-top: none; justify-content: center; padding: 1.5rem;">
+                        <button class="btn btn-primary" type="button" data-bs-dismiss="modal" style="background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+                   border: none; border-radius: 50px; padding: 8px 30px;
+                   font-weight: 600; font-size: 1.1rem; letter-spacing: 0.5px;
+                   box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                            Entendido
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Ícono flotante de WhatsApp -->
+        <a href="#" data-bs-toggle="modal" data-bs-target="#whatsappModal" class="whatsapp-float">
+            <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp" width="50" height="50">
+        </a>
+
+        <!-- Modal Urgente con Tablas Mejoradas -->
+        <div class="modal fade" id="modalUrgente" tabindex="-1" aria-labelledby="modalUrgenteLabel" aria-hidden="true"
+            data-bs-backdrop="static" data-bs-keyboard="false">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content border-danger border-3">
+                    <div class="modal-header bg-danger text-white">
+                        <h5 class="modal-title fw-bold" id="modalUrgenteLabel">⚠️ INSCRIPCIONES - VIERNES 8 DE AGOSTO
+                        </h5>
+                    </div>
+                    <div class="modal-body py-4">
+                        <h3 class="text-danger fw-bold text-center mb-4" style="font-size: 1.75rem;">
+                            Horarios de inscripción por carrera y turno
+                        </h3>
+
+                        <!-- Tabla combinada para ambos turnos -->
+                        <div class="table-responsive mb-4">
+                            <table class="table table-bordered table-hover align-middle">
+                                <thead>
+                                    <tr class="table-primary">
+                                        <th class="w-40">Carrera</th>
+                                        <th class="w-30">Horario Matutino</th>
+                                        <th class="w-30">Horario Vespertino</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="fs-5">
+                                    <tr>
+                                        <td><strong>Arquitectura</strong></td>
+                                        <td>9:00 – 9:30</td>
+                                        <td>15:00 – 15:30</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Relaciones Internacionales</strong></td>
+                                        <td>9:30 – 10:00</td>
+                                        <td>15:30 – 16:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Ingeniería en Computación</strong></td>
+                                        <td>10:00 – 11:00</td>
+                                        <td>16:00 – 17:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Comunicación y Periodismo</strong></td>
+                                        <td>11:00 – 12:00</td>
+                                        <td>17:00 – 18:00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="alert alert-warning text-center fs-5 mb-4">
+                            <strong>Revisar los cronogramas para verificar la división de los grupos.</strong>
+                        </div>
+
+                        <hr class="my-4">
+
+                        <!-- Documentos requeridos -->
+                        <div class="mb-3">
+                            <h5 class="text-danger fw-bold mb-3">📄 Documentos necesarios para tu inscripción:</h5>
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th class="w-60">Documento</th>
+                                            <th class="w-40">Instrucciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="fs-5">
+                                        <tr>
+                                            <td><strong>Carta de asignación firmada</strong></td>
+                                            <td class="text-muted">Marcada como PLANTEL</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Carta Compromiso</strong></td>
+                                            <td class="text-muted">Descarga, llena y firma</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Comprobante de aportación voluntaria</strong></td>
+                                            <td class="text-muted">-</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Identificación oficial</strong></td>
+                                            <td class="text-muted">INE, pasaporte, etc.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer justify-content-center">
+                        <button id="btnModalUrgente" type="button" class="btn btn-danger px-4 fw-bold"
+                            data-bs-dismiss="modal" disabled>
+                            Entendido <span id="countdown">(15)</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Script para controlar el bloqueo del botón por 15 segundos -->
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const modalUrgente = document.getElementById('modalUrgente');
+                const btn = document.getElementById('btnModalUrgente');
+                const countdown = document.getElementById('countdown');
+                let seconds = 15;
+
+                if (modalUrgente) {
+                    modalUrgente.addEventListener('shown.bs.modal', () => {
+                        btn.disabled = true;
+                        countdown.textContent = `(${seconds})`;
+
+                        const interval = setInterval(() => {
+                            seconds--;
+                            countdown.textContent = `(${seconds})`;
+
+                            if (seconds <= 0) {
+                                clearInterval(interval);
+                                btn.disabled = false;
+                                countdown.remove();
+                            }
+                        }, 1000);
+                    });
+                }
+            });
+        </script>
+
+        <div class="modal-footer justify-content-center">
+            <button id="btnModalUrgente" type="button" class="btn btn-danger px-4 fw-bold" data-bs-dismiss="modal"
+                disabled>
+                Entendido <span id="countdown">(15)</span>
+            </button>
+        </div>
+        </div>
+        </div>
+        </div>
+
+
+
+        <!-- Script para el temporizador -->
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const modalUrgente = document.getElementById('modalUrgente');
+                const btn = document.getElementById('btnModalUrgente');
+                const countdown = document.getElementById('countdown');
+                let seconds = 15; // Duración actualizada
+
+                if (modalUrgente) {
+                    modalUrgente.addEventListener('shown.bs.modal', () => {
+                        btn.disabled = true;
+                        countdown.textContent = `(${seconds})`;
+
+                        const interval = setInterval(() => {
+                            seconds--;
+                            countdown.textContent = `(${seconds})`;
+
+                            if (seconds <= 0) {
+                                clearInterval(interval);
+                                btn.disabled = false;
+                                countdown.remove();
+                            }
+                        }, 1000);
+                    });
+                }
+            });
+        </script>
+
+
+
+        <!-- Modal Bootstrap -->
+        <div class="modal fade" id="whatsappModal" tabindex="-1" aria-labelledby="whatsappModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content border-0 shadow">
+                    <div class="modal-header bg-success text-white">
+                        <h5 class="modal-title" id="whatsappModalLabel">¡Únete al canal oficial FES Aragón!</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                            aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <p class="mb-3">
+                            Alumnas y alumnos de nuevo ingreso: escaneen el siguiente QR o presionen el botón para
+                            unirse a nuestro canal de difusión en WhatsApp.
+                        </p>
+                        <!-- QR -->
+                        <!-- QR -->
+                        <div class="qr-container mb-3">
+                            <img src="img/qr_wa_fesaragon.png" alt="QR WhatsApp Canal" class="img-fluid rounded">
+                        </div>
+
+
+                        <!-- Botón de redirección -->
+                        <a href="https://www.whatsapp.com/channel/0029VawMMSu6rsQnzqyai52X" target="_blank"
+                            class="btn btn-success w-100">
+                            Ir al canal de WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Ícono flotante de Facebook -->
+        <a href="#" data-bs-toggle="modal" data-bs-target="#facebookModal" class="facebook-float"
+            style="position: fixed; bottom: 80px; right: 20px; z-index: 1055; box-shadow: 0 2px 10px rgb(29, 112, 255);">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" width="50" height="50">
+        </a>
+
+        <!-- Modal Bootstrap para Facebook -->
+        <div class="modal fade" id="facebookModal" tabindex="-1" aria-labelledby="facebookModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content border-0 shadow">
+                    <div class="modal-header bg-primary text-white">
+                        <h5 class="modal-title" id="facebookModalLabel">¡Síguenos en Facebook!</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                            aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <p class="mb-3">
+                            Personas de nuevo ingreso: sígannos en nuestra página de Facebook para recibir noticias,
+                            eventos y
+                            actualizaciones importantes.
+                        </p>
+                        <!-- QR Facebook -->
+                        <div class="qr-container mb-3">
+                            <img src="img/qr_fes_facebook.png" alt="QR Facebook Página" class="img-fluid rounded">
+                        </div>
+
+                        <!-- Botón de redirección -->
+                        <a href="https://www.facebook.com/FESAragonUNAM" target="_blank" class="btn btn-primary w-100">
+                            Ir a la página de Facebook
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

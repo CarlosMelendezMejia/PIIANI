@@ -1,0 +1,1 @@
+alert("Recordatorio: Obligatorio el uso de cubrebocas para las actividades de estos dias.")

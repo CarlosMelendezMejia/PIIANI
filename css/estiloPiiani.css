@@ -1,0 +1,229 @@
+body {
+    background-color: rgb(242, 242, 242);
+}
+
+a:link,
+a:visited,
+a:active {
+    text-decoration: none;
+}
+
+.container {
+    background-color: rgb(250, 250, 250);
+    min-height: 100vh;
+}
+
+.bloque-piiani {
+    background-color: rgb(242, 242, 242);
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(20, 20, 255);
+    overflow: hidden;
+}
+
+.bloque-piiani .boton-piiani {
+    display: inline-block;
+    color: #FFF;
+    width: 100%;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 3px 0 15px 0;
+    -webkit-box-shadow: 2px 2px 6px -1px rgba(0, 0, 0, 0.84);
+    -moz-box-shadow: 2px 2px 6px -1px rgba(0, 0, 0, 0.84);
+    box-shadow: 2px 2px 6px -1px rgba(0, 0, 0, 0.84);
+}
+
+.boton-piiani.azul {
+    background: linear-gradient(#5280D7, #8097c3);
+
+}
+
+.boton-piiani.naranja {
+    background: linear-gradient(#FB8637, #f5a067);
+    border-radius: 5px;
+}
+
+.boton-piiani.verde {
+    background: linear-gradient(#008925, #009c29);
+}
+
+.boton-piiani.amarillo {
+    color: #66B032;
+    background: linear-gradient(#FEFE0F, #FEFE33);
+}
+
+.boton-piiani.rosa {
+    color: #FFF;
+    font-size: 1.5em;
+    text-decoration: none;
+    background: linear-gradient(#ff63ea, #f78de9);
+}
+
+.fecha-boton {
+    text-align: center;
+    font-style: bold;
+    font-size: 10px;
+    color: rgb(0, 0, 0);
+    margin: -12px 0 6px 0;
+}
+
+.titulo-azul {
+    width: 100%;
+    background: linear-gradient(#5280D7, #8097c3);
+
+}
+
+.titulo-naranja {
+    width: 100%;
+    background: linear-gradient(#FB8637, #f5a067);
+}
+
+.maximo-alto {
+    height: inherit;
+}
+
+.boton-piiani.gris {
+    background: linear-gradient(#aaa, #999);
+}
+
+.bloque-piiani .contenidos {
+    padding: 10px;
+}
+
+.texto-azul {
+    color: #5280D7;
+}
+
+.texto-naranja {
+    color: #f5a067;
+}
+
+.texto-gris {
+    color: #999;
+}
+
+.boton-piiani.azul:hover {
+    background: linear-gradient(#2859b5, #5579bd);
+    font-weight: bold;
+}
+
+.boton-piiani.naranja:hover {
+    background: linear-gradient(#ff6d0a, #ff812b);
+    font-weight: bold;
+}
+
+.boton-piiani.verde:hover {
+    background: linear-gradient(#11bf08, #31bf2a);
+    font-weight: bold;
+}
+
+.boton-piiani.amarillo:hover {
+    background: linear-gradient(#FEFE0F, #FEFE0F);
+    color: #4b8222;
+    font-weight: bold;
+}
+
+.boton-piiani.rosa:hover {
+    background: linear-gradient(#ff42e6, #ff63ea);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+.boton-piiani.gris:hover {
+    background: linear-gradient(#888, #777);
+    font-weight: bold;
+}
+
+.bloque-piiani .contenido {
+    display: block;
+    background-color: #FFF;
+    border-style: solid;
+    border-color: rgb(20, 20, 255);
+    border-radius: 0 30px 30px 30px;
+    border-width: 2px;
+    margin: 10px 0 0 0;
+    padding: 0 1em 1em 1em;
+    /*min-height:*/
+}
+
+.bloque-piiani .contenido .pestana {
+    /*display: block;*/
+    border-radius: 0 30px 30px 0;
+    margin: 10px 0 0 0;
+    width: 40%;
+    padding: 5px;
+    text-align: center;
+    position: relative;
+    transform: translate(-1em, -10px);
+}
+
+.contenido ul {
+    margin: 10px;
+    padding: 0;
+}
+
+.color1 {
+    background: linear-gradient(#FF3855, #ff667d);
+}
+
+.color2 {
+    background: linear-gradient(#FA5B3D, #fb826a);
+}
+
+.color3 {
+    background: linear-gradient(#FFAA1D, #ffbb4d);
+}
+
+.color4 {
+    background: linear-gradient(#FFF700, #fff833);
+}
+
+.color5 {
+    background: linear-gradient(#A7F432, #b6f655);
+}
+
+
+/*@media (max-width: 768px) {
+    .bloque-piiani .contenido {
+        /*min-height: 260px;
+    }
+}*/
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .bloque-piiani .contenido {
+        min-height: 280px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .bloque-piiani .contenido {
+        min-height: 300px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .bloque-piiani .contenido {
+        min-height: 360px;
+    }
+}
+
+img {
+    width: 100%;
+}
+
+.cuerpo-principal {
+    background-color: #fff;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.7);
+    min-height: 100vh;
+}
+
+.modal-title {
+    color: #0f0085;
+    text-align: center;
+}
+
+.disabled {
+    cursor: not-allowed;
+}

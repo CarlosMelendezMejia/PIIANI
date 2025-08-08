@@ -1,0 +1,308 @@
+:root {
+	--color-fondo-primario: rgb(147, 149, 152);
+	--color-fondo-secundario: rgb(251, 252, 253);
+	--color-texto-secundario: rgb(102, 117, 149);
+
+	--color-oro-UNAM: rgb(187, 136, 0);
+	--color-azul-UNAM: rgb(0, 43, 122);
+	--color-negro: rgb(0,0,0);
+	--color-blanco:	rgb(255,255,255);
+	--color-fondo-gris: rgb(236, 240, 245);
+
+	--color-fondo-primario-10: #8ac5ff;
+	--color-texto-primario-10: rgb(0,0,0);
+	--color-fondo-secundario-10: rgb(251, 252, 253);
+	--color-texto-secundario-10: rgb(21, 24, 31);
+
+	--color-fondo-primario-11: #7D3C98;
+	--color-texto-primario-11: rgb(255,255,255);
+	--color-fondo-secundario-11: rgb(251, 252, 253);
+	--color-texto-secundario-11: rgb(102, 117, 149);
+
+	--color-fondo-primario-12: #2471A3;
+	--color-texto-primario-12: rgb(255,255,255);
+	--color-fondo-secundario-12: rgb(251, 252, 253);
+	--color-texto-secundario-12: rgb(102, 117, 149);
+
+	--color-fondo-primario-13: #138D75;
+	--color-texto-primario-13: rgb(255,255,255);
+	--color-fondo-secundario-13: rgb(251, 252, 253);
+	--color-texto-secundario-13: rgb(102, 117, 149);
+
+	--color-fondo-primario-31: #D4AC0D;
+	--color-texto-primario-31: rgb(255,255,255);
+	--color-fondo-secundario-31: rgb(251, 252, 253);
+	--color-texto-secundario-31: rgb(102, 117, 149);
+
+	--color-fondo-primario-32: #5F6A6A;
+	--color-texto-primario-32: rgb(255,255,255);
+	--color-fondo-secundario-32: rgb(251, 252, 253);
+	--color-texto-secundario-32: rgb(102, 117, 149);
+
+	--color-fondo-primario-41: #2E4053;
+	--color-texto-primario-41: rgb(255,255,255);
+	--color-fondo-secundario-41: rgb(251, 252, 253);
+	--color-texto-secundario-41: rgb(102, 117, 149);
+
+	--color-fondo-primario-42: #5DADE2;
+	--color-texto-primario-42: rgb(255,255,255);
+	--color-fondo-secundario-42: rgb(251, 252, 253);
+	--color-texto-secundario-42: rgb(102, 117, 149);
+
+
+
+}
+
+.cuadro{
+	border-width: 1px;
+	border-style: solid;
+	border-color: var(--color-fondo-gris);
+	text-align: center;
+}
+
+.cajaPrincipal{
+	background-color: var(--color-fondo-primario);
+	color: var(--color-blanco);
+	text-align: center;
+}
+
+.cajaSecundaria{
+	background-color: var(--color-fondo-secundario);
+	color: var(--color-texto-secundario);
+}
+
+.negritas{
+	font-weight:bold;
+}
+
+.justificado{
+	text-align: justify;
+}
+
+.affix {
+	position: fixed;
+	top: 0;
+	width: inherit;
+	z-index: 9999 !important;
+	color: red;
+}
+
+.affix-top {
+	position: static;
+	margin-top:0px; 
+	width: inherit;
+	z-index: 9999 !important;
+	color: green;
+}
+
+.affix-bottom { 
+	position: fixed;
+	top: 0; 
+	width: inherit;
+	z-index: 9999 !important;
+	color: blue;
+}
+
+.row {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+#progressBar {
+	background-color: rgb(255,200,200);
+	background-position: -1px;
+	background-repeat: no-repeat;
+	background-size: 0% 100%;
+	width: 90%;
+	transform: translateX(5%);
+	position: relative; 
+	overflow: hidden;
+}
+
+.cajaPrincipal10{
+	background-color: var(--color-fondo-primario-10);
+	color: var(--color-texto-primario-10);
+	text-align: center;
+}
+
+.cajaSecundaria10{
+	background-color: var(--color-fondo-secundario-10);
+	color: var(--color-texto-secundario-10);
+}
+
+.cajaPrincipal11{
+	background-color: var(--color-fondo-primario-11);
+	color: var(--color-texto-primario-11);
+	text-align: center;
+}
+
+.cajaSecundaria11{
+	background-color: var(--color-fondo-secundario-11);
+	color: var(--color-texto-secundario-11);
+}
+
+.cajaPrincipal12{
+	background-color: var(--color-fondo-primario-12);
+	color: var(--color-texto-primario-12);
+	text-align: center;
+}
+
+.cajaSecundaria12{
+	background-color: var(--color-fondo-secundario-12);
+	color: var(--color-texto-secundario-12);
+}
+
+.cajaPrincipal13{
+	background-color: var(--color-fondo-primario-13);
+	color: var(--color-texto-primario-13);
+	text-align: center;
+}
+
+.cajaSecundaria13{
+	background-color: var(--color-fondo-secundario-13);
+	color: var(--color-texto-secundario-13);
+}
+
+.cajaPrincipal31{
+	background-color: var(--color-fondo-primario-31);
+	color: var(--color-texto-primario-31);
+	text-align: center;
+}
+
+.cajaSecundaria31{
+	background-color: var(--color-fondo-secundario-31);
+	color: var(--color-texto-secundario-31);
+}
+
+.cajaPrincipal32{
+	background-color: var(--color-fondo-primario-32);
+	color: var(--color-texto-primario-32);
+	text-align: center;
+}
+
+.cajaSecundaria32{
+	background-color: var(--color-fondo-secundario-32);
+	color: var(--color-texto-secundario-32);
+}
+
+.cajaPrincipal41{
+	background-color: var(--color-fondo-primario-41);
+	color: var(--color-texto-primario-41);
+	text-align: center;
+}
+
+.cajaSecundaria41{
+	background-color: var(--color-fondo-secundario-41);
+	color: var(--color-texto-secundario-41);
+}
+
+.cajaPrincipal42{
+	background-color: var(--color-fondo-primario-42);
+	color: var(--color-texto-primario-42);
+	text-align: center;
+}
+
+.cajaSecundaria42{
+	background-color: var(--color-fondo-secundario-42);
+	color: var(--color-texto-secundario-42);
+}
+
+#listaMenuSecundario::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+#listaMenuSecundario::-webkit-scrollbar
+{
+	width: 15px;
+	background-color: rgba(0,0,0,0);;
+}
+
+#listaMenuSecundario::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #F39C12;
+}
+
+/* Elementos para el nuevo estilo de los indicadores */
+.verde{
+	background-color: rgb(63,148,53);
+}
+.naranja{
+	background-color: rgb(222,118,57);
+}
+.rojo{
+	background-color: rgb(204,50,50);
+}
+.negro{
+	background-color: rgb(0,0,0);
+}
+.circuloVerde {
+	width: 20px;
+	height: 20px;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	background: rgb(63,148,53);
+	display: inline-block;
+}
+.circuloNaranja {
+	width: 20px;
+	height: 20px;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	background: rgb(222,118,57);
+	display: inline-block;
+}
+.circuloRojo {
+	width: 20px;
+	height: 20px;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	background: rgb(204,50,50);
+	display: inline-block;
+}
+.circuloNegro {
+	width: 20px;
+	height: 20px;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	background: rgb(0,0,0);
+	display: inline-block;
+}
+
+.radio-inline{
+	width: 22%;
+}
+
+hr{
+	border: 0;
+	height: 1px;
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+
+#muffin{
+	z-index: 500;
+	display: none;
+	background-color: white;
+	position: fixed;
+
+	left: 50%;
+	top: 50%;
+	width: 80%;
+	transform: translateX(-50%);
+	
+	padding: 0 15px;
+	border-style: double;
+	border-width: 5px;
+	border-radius: 30px 10px;
+}

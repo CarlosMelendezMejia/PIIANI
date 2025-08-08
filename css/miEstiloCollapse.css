@@ -1,0 +1,30 @@
+.panel-heading {
+	cursor: pointer;
+	background: linear-gradient(rgb(81,150,206), rgb(51, 122, 183) 70%);
+}
+
+.flecha {
+	transition: 0.2s;/* cubic-bezier(0.810, -0.330, 0.345, 1.375);*/
+	float: right;
+}
+
+.flecha.rotate180 {
+	transform: rotate(180deg) translate(0%, 0px);
+	-webkit-transform: rotate(180deg) translate(0%, 0px);
+	-ms-transform: rotate(180deg) translateX(0%, 0px);
+	opacity: 1;
+	height: 16px;
+	display: inline-block;
+}
+
+.flecha.rotate0{
+	opacity: 1;
+	height: 16px;
+	display: inline-block;
+	transform: translate(0%,0%);
+}
+
+.panel-title{
+	color: white;
+	font-weight: bold;
+}

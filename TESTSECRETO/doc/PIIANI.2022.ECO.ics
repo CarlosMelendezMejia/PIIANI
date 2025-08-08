@@ -1,0 +1,228 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PIIANI.2022.ECO
+X-WR-TIMEZONE:America/Mexico_City
+X-WR-CALDESC:Actividades de Economía para el PIIANI generación 2022
+BEGIN:VEVENT
+DTSTART:20210809T140000Z
+DTEND:20210809T150000Z
+DTSTAMP:20210807T053113Z
+UID:70dg3n0lenbiilhc9unonlg2td@google.com
+CREATED:20210806T052443Z
+DESCRIPTION:Grupos: 1111\, 1112\, 1113 y 1114<br><a href="https://cuaieed-u
+ nam.zoom.us/j/87472064921">https://cuaieed-unam.zoom.us/j/87472064921</a>
+LAST-MODIFIED:20210806T052443Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Presentación ECO Grupos: 1111\, 1112\, 1113 y 1114
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20210809T220000Z
+DTEND:20210809T230000Z
+DTSTAMP:20210807T053113Z
+UID:5qc18qcgp7pdg17b1bnvdbje9v@google.com
+CREATED:20210806T052536Z
+DESCRIPTION:Grupos: 1161 y 1162<br><a href="https://cuaieed-unam.zoom.us/j/
+ 89178793400">https://cuaieed-unam.zoom.us/j/89178793400</a>
+LAST-MODIFIED:20210806T052536Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Presentación ECO Grupos: 1161 y 1162
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20210810T150000Z
+DTEND:20210810T181500Z
+DTSTAMP:20210807T053113Z
+UID:5irh1h619oatg46reg764thks8@google.com
+CREATED:20210806T052817Z
+DESCRIPTION:Presentación de los profesores de tiempo completo en la carrera
+  de Economía.&nbsp\;<br>&nbsp\;Dra. Guadalupe García Balderas&nbsp\;<br>&nb
+ sp\;Dr. Helios Padilla Zazueta&nbsp\;<br>&nbsp\;Dr. Fernando Palma Galvan&n
+ bsp\;<br>&nbsp\;Dr. Orlando Eleazar Moreno Pérez&nbsp\;<br>&nbsp\;Dr. Jorge
+  González Gutiérrez&nbsp\;<br>&nbsp\;Dr. Jaime Llanos Martínez&nbsp\;<br>&n
+ bsp\;Dr. Jaime Linares Zarco&nbsp\;<br>&nbsp\;Mtro. José Ricardo Ramírez Br
+ un&nbsp\;<br>&nbsp\;Grupos: 1111\, 1112\, 1113 y 1114<br><a href="https://c
+ uaieed-unam.zoom.us/j/84226935037" id="ow15640" __is_owner="true">https://c
+ uaieed-unam.zoom.us/j/84226935037</a>
+LAST-MODIFIED:20210806T052817Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Presentación profesores - Grupos: 1111\, 1112\, 1113 y 1114
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20210810T210000Z
+DTEND:20210811T000000Z
+DTSTAMP:20210807T053113Z
+UID:41e07lf8dp8io34nb566bakkgg@google.com
+CREATED:20210806T052939Z
+DESCRIPTION:Descripción:Presentación de los profesores de tiempo completo e
+ n la carrera de Economía.&nbsp\;<br>&nbsp\;Dra. Guadalupe García Balderas&n
+ bsp\;<br>&nbsp\;Dr. Helios Padilla Zazueta&nbsp\;<br>&nbsp\;Dr. Fernando Pa
+ lma Galvan&nbsp\;<br>&nbsp\;Dr. Orlando Eleazar Moreno Pérez&nbsp\;<br>&nbs
+ p\;Dr. Jorge González Gutiérrez&nbsp\;<br>&nbsp\;Dr. Jaime Llanos Martínez&
+ nbsp\;<br>&nbsp\;Dr. Jaime Linares Zarco&nbsp\;<br>&nbsp\;Mtro. José Ricard
+ o Ramírez Brun&nbsp\;<br>&nbsp\;Grupos: 1161 y 1162<br><a href="https://cua
+ ieed-unam.zoom.us/j/85605748646" id="ow15993" __is_owner="true">https://cua
+ ieed-unam.zoom.us/j/85605748646</a>
+LAST-MODIFIED:20210806T052939Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Presentación profesores - Grupos: 1161 y 1162
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20210811T130000Z
+DTEND:20210811T140000Z
+DTSTAMP:20210807T053113Z
+UID:1ehorc4649jbqqmr08bghpg9ef@google.com
+CREATED:20210806T053123Z
+DESCRIPTION:Actividades extra de las carreras: Presentación del Maestro egr
+ esado de la carrera: Julio César Aguilar Méndez\, Subgerente General de Gas
+  Natural y Etanol de la Subdirección de Comercialización de PEMEX Transform
+ ación\, a los grupos: 1111\, 1112\, 1113 y 1114.<br><a href="https://cuaiee
+ d-unam.zoom.us/j/89299353878" id="ow16304" __is_owner="true">https://cuaiee
+ d-unam.zoom.us/j/89299353878</a>
+LAST-MODIFIED:20210806T053123Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Presentación egresado
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20210812T000000Z
+DTEND:20210812T010000Z
+DTSTAMP:20210807T053113Z
+UID:58asfj58a7uq4t78dhne5u0d7s@google.com
+CREATED:20210806T053159Z
+DESCRIPTION:ctividades extra de las carreras: Presentacion del Maestro egre
+ sado de la carrera: Julio César Aguilar Méndez\, Subgerente General de Gas 
+ Natural y Etanol de la Subdirección de Comercialización de PEMEX Transforma
+ ción\, a los grupos: 1161 y 1162<br><a href="https://cuaieed-unam.zoom.us/j
+ /88480260185" id="ow16607" __is_owner="true">https://cuaieed-unam.zoom.us/j
+ /88480260185</a>
+LAST-MODIFIED:20210806T053159Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Presentación egresado
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20210812
+DTEND;VALUE=DATE:20210814
+DTSTAMP:20210807T053113Z
+UID:1vbdcvh12c71febj8rhedho65i@google.com
+CREATED:20210806T053409Z
+DESCRIPTION:https://forms.gle/1KDge8AFxsawmbcv7                  https://fo
+ rms.gle/GscyNStNH2QU2Rru9
+LAST-MODIFIED:20210806T053409Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Examen diagnóstico: Examen de conocimientos Matemáticos y Generales
+  para alumnos con cuenta de correo @gmail.com
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20210812
+DTEND;VALUE=DATE:20210814
+DTSTAMP:20210807T053113Z
+UID:2akdu4ktt83unrag3f40kohg01@google.com
+CREATED:20210806T053433Z
+DESCRIPTION:<a href="https://forms.gle/ZA3ou22LD2DMvn7J7" id="ow17245" __is
+ _owner="true">https://forms.gle/ZA3ou22LD2DMvn7J7                   https:/
+ /forms.gle/m5HEDsBpTKuQ8ogG7</a>
+LAST-MODIFIED:20210806T053443Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Examen diagnóstico: Examen de conocimientos Matemáticos y Generales
+  para alumnos con cuenta de correo institucional @aragon.unam.mx
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20210811T220000Z
+DTEND:20210811T230000Z
+DTSTAMP:20210807T053113Z
+UID:2uhvj9nev38rtia60crnped397@google.com
+CREATED:20210807T050936Z
+DESCRIPTION:
+LAST-MODIFIED:20210807T050936Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Jazz básico
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20210813T150000Z
+DTEND:20210813T153000Z
+DTSTAMP:20210807T053113Z
+UID:4mutslc50v8r8i39m47v3h22ao@google.com
+CREATED:20210807T050958Z
+DESCRIPTION:
+LAST-MODIFIED:20210807T050958Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:¿Te interesa ser parte de un equipo deportivo representativo?
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20210812T150000Z
+DTEND:20210812T160000Z
+DTSTAMP:20210807T053113Z
+UID:77k1khs69uue7b0lo6skjjjc9o@google.com
+CREATED:20210807T051035Z
+DESCRIPTION:<a href="https://cuaieed-unam.zoom.us/j/83572796659" id="ow1630
+ 0" __is_owner="true">https://cuaieed-unam.zoom.us/j/83572796659</a>
+LAST-MODIFIED:20210807T051035Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Pausa activa deportiva
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20210812T210000Z
+DTEND:20210812T220000Z
+DTSTAMP:20210807T053113Z
+UID:46m9o66b6go9jdhf0p2sm8cin4@google.com
+CREATED:20210807T051057Z
+DESCRIPTION:<a href="https://cuaieed-unam.zoom.us/j/89215802575" id="ow1659
+ 5" __is_owner="true">https://cuaieed-unam.zoom.us/j/89215802575</a>
+LAST-MODIFIED:20210807T051057Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Pausa activa deportiva
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20210813T180000Z
+DTEND:20210813T190000Z
+DTSTAMP:20210807T053113Z
+UID:6os3fjnqk52uteggeno0n24uc5@google.com
+CREATED:20210806T053705Z
+DESCRIPTION:\nBienvenida y presentación de servicios\n\nInformación para un
+ irse a Google Meet\nEnlace a la videollamada: https://meet.google.com/dmr-f
+ xsw-cvt
+LAST-MODIFIED:20210807T052557Z
+LOCATION:
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:Confirmar - Presentación de servicios - ECO
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR

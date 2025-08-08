@@ -1,0 +1,247 @@
+:root {
+    /**********Colores del manual************/
+    /*Rangos de azules*/
+    --color-azul-1:#a8d8f3;
+    --color-azul-2:#4ac5dc;
+    --color-azul-3:#5cc8d8;
+    --color-azul-4:#7fc3eb;
+    --color-azul-5:#81c3eb;
+    --color-azul-6:#667fc0;
+    --color-azul-7:#4357a6;
+    /*Rangos de morados*/
+    --color-morado-1:#9e57a3;
+    --color-morado-2:#986cae;
+    --color-morado-3:#7b75b7;
+    /*Colores pantone*/
+    --color-amarillo-pntn:#ffa700;
+    --color-azul-pntn:#00306d;
+}
+
+#sidebarCollapse {
+    width: 53px;
+    height: 40px;
+    border-width: 3px;
+    border-style:solid;
+    background: linear-gradient(rgb(245,245,245), rgb(218,218,218) 70%);
+    border-radius: 10px;
+}
+#sidebarCollapse:hover {
+    /*background: rgb(218,218,218);*/
+    background: linear-gradient(rgb(218,218,218), rgb(245,245,245) 70%);
+}
+
+#sidebarCollapse span {
+    width: 80%; 
+    height: 2px;
+    margin: 0 auto;
+    display: block;
+    background: #555;
+    transition: all 0.8s cubic-bezier(0.810, -0.330, 0.345, 1.375);
+}
+
+#sidebarCollapse span:first-of-type {
+    /* rotate first one */
+    transform: rotate(-30deg) translate(0px, -3px);
+    opacity: 0;
+}
+#sidebarCollapse span:nth-of-type(2) {
+    /* second one is not visible */
+    opacity: 0;
+}
+#sidebarCollapse span:last-of-type {
+    /* rotate third one */
+    transform: rotate(30deg) translate(0px, 3px);
+    opacity: 0;
+}
+
+#sidebarCollapse.active span {
+    /* no rotation */
+    transform: none;
+    /* all bars are visible */
+    opacity: 0;
+    margin: 5px auto;
+}
+
+.wrapper {
+    display: flex;
+    align-items: stretch;
+    perspective: unset; /* Define how many pixels the sidebar is placed from the view. */
+    background-color: rgb(236, 240, 245);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 -15px;
+}
+
+#content{
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    src: url("fonts/Poppins-Regular.ttf") format("truetype");
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 100%;
+    background: rgb(34, 45, 50);
+    color: #fff;
+    transition: all 0.6s cubic-bezier(0.945, 0.020, 0.270, 0.665);
+    transform-origin: center left; /* Set the transformed position of sidebar to center left side. */
+    border-radius: 0 0 40px 0;
+}
+
+#sidebar.active {
+    margin-right: -250px;
+    transform: rotateY(90deg); /* Rotate sidebar vertically by 100 degrees. */
+}
+
+.btnMenu{
+    background: rgb(34, 45, 50);
+    border-width: 0px;
+    color: #eee;
+    padding: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: left;
+    line-height: 25px;
+    display: block;
+}
+
+.btnMenu:hover{
+    text-decoration: none;
+    color: #fff;
+    background: rgb(30, 40, 44);
+    border-left: 30px;
+    border-color: rgb(243, 156, 18);
+
+}
+
+li.active{
+    border-left: 30px;
+    border-color: rgb(243, 156, 18);
+}
+
+.menu{
+    background-color: rgb(30, 40, 44);
+    color: rgb(69, 74, 76);
+    font-size: 15px;
+    text-align: left;
+    display: block;
+    padding-left: 10px;
+}
+
+#FrameDeConsulta{
+    border: 0px;
+    
+}
+
+
+.BtnAtras{
+    background: linear-gradient(var(--color-morado-2), var(--color-morado-1) 70%);
+    border-width: 3px;
+    border-style:solid;
+    border-color: var(--color-morado-1);
+    color: rgb(0,0, 0);
+    width: 53px;
+    height: 40px;
+    line-height: 34px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+.BtnAtras:hover{
+    color: rgb(255, 192, 0); 
+    text-decoration:none;
+    background: linear-gradient(var(--color-morado-1), var(--color-morado-2) 70%);
+}
+
+/***********/
+.activeMenu, .activeMenu:hover{
+            border-left: solid;
+            border-color: #9e57a3;
+        }
+
+        .btnLi{
+            text-decoration: none;
+            color: white;
+            cursor:pointer;
+            display: block;
+        }
+
+        .btnLi.completo,.btnLi.completo:hover{
+            text-decoration: none;
+            color: rgb(43, 235, 28);
+            cursor: pointer;
+            display: block;
+        }
+
+        .btnLi:hover{
+            text-decoration: none;
+            color: inherit;
+            background-color: #1E282C;
+        }
+
+        .activeLi:link{
+            text-decoration: none;
+            color: white;
+        }
+
+        .activeLi:visited{
+            text-decoration: none;
+            color: white;
+        }
+
+        .activeLi, .activeLi:hover{
+            border-left: solid;
+            border-color: #9e57a3;
+            text-decoration: none;
+            color: white;
+        }
+
+        ul{
+            list-style-type:none;
+        }
+
+        .oculto{
+            display: none;
+        }
+
+        #listaMenuSecundario{
+            height: 350px;
+            overflow-y: scroll;
+        }
+
+        #listaMenuSecundario::before{
+            position: absolute;
+            content: '';
+            background: linear-gradient(rgba(34, 45, 50,1) 1%,rgba(34, 45, 50,0) 13%,rgba(34, 45, 50,0) 87%, rgba(34, 45, 50,1) 99%);
+            height: 352px;
+            width: 193px;
+            pointer-events: none;
+        }
+        /***********/
+        /*********Scrollbar************/
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #222D32; 
+    background: #ECF0F5;
+    border-radius: 4px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--color-morado-2); 
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-morado-1); 
+}
+        /*********************/
