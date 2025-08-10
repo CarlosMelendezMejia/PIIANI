@@ -230,39 +230,11 @@
 
         document.addEventListener('DOMContentLoaded', () => {
             const modalUrgenteId = 'modalUrgente';
-            const modalAvisoId = 'AvisoInicio';
-            const modalWhatsappId = 'whatsappModal';
-
             const modalUrgente = document.getElementById(modalUrgenteId);
-            const modalAviso = document.getElementById(modalAvisoId);
 
             if (modalUrgente) {
-                const modal1 = new bootstrap.Modal(modalUrgente);
-                modal1.show();
-
-                // Al cerrar modal urgente, mostrar AvisoInicio
-                modalUrgente.addEventListener('hidden.bs.modal', () => {
-                    if (modalAviso) {
-                        const modal2 = new bootstrap.Modal(modalAviso);
-                        modal2.show();
-
-                        // Al cerrar AvisoInicio, mostrar whatsappModal
-                        modalAviso.addEventListener('hidden.bs.modal', () => {
-                            mostrarModal(modalWhatsappId);
-                        });
-                    } else {
-                        mostrarModal(modalWhatsappId);
-                    }
-                });
-            } else if (modalAviso) {
-                const modal2 = new bootstrap.Modal(modalAviso);
-                modal2.show();
-
-                modalAviso.addEventListener('hidden.bs.modal', () => {
-                    mostrarModal(modalWhatsappId);
-                });
-            } else {
-                mostrarModal(modalWhatsappId);
+                const modal = new bootstrap.Modal(modalUrgente);
+                modal.show();
             }
         });
 
@@ -385,11 +357,8 @@
                         <div class="card-body text-center card-body-shadow">
                             <h4 class="card-title"><strong>TRAMITA</strong></h4>
                             <p class="card-text">Correo electrónico<br />@aragon.unam.mx</p>
-                            <h4 class="text-red small-font">El correo se tramita después de la inscripción
-                            </h4>
-
-                            <!-- <a class="btnAzul" role="button" data-bs-toggle="modal"
-                                data-bs-target="#CorreoAragon">Visitar el sitio</a> -->
+                            <a class="btnAzul" role="button" data-bs-toggle="modal"
+                                data-bs-target="#CorreoAragon">Visitar el sitio</a>
                         </div>
                     </div>
                 </div>
@@ -1876,98 +1845,57 @@
         </a>
 
         <!-- Modal Urgente con Tablas Mejoradas -->
+        <!-- Modal Urgente - Versión Mejorada -->
         <div class="modal fade" id="modalUrgente" tabindex="-1" aria-labelledby="modalUrgenteLabel" aria-hidden="true"
             data-bs-backdrop="static" data-bs-keyboard="false">
             <div class="modal-dialog modal-dialog-centered modal-lg">
-                <div class="modal-content border-danger border-3">
+                <div class="modal-content border-danger border-3 shadow-lg">
+                    <!-- Encabezado con icono de advertencia -->
                     <div class="modal-header bg-danger text-white">
-                        <h5 class="modal-title fw-bold" id="modalUrgenteLabel">⚠️ INSCRIPCIONES - VIERNES 8 DE AGOSTO
-                        </h5>
+                        <div class="d-flex align-items-center w-100">
+                            <i class="bi bi-exclamation-triangle-fill me-3 fs-3"></i>
+                            <h5 class="modal-title fw-bold mb-0 flex-grow-1" id="modalUrgenteLabel">
+                                Aviso Importante para la comunidad estudiantil de nuevo ingreso
+                            </h5>
+
+                        </div>
                     </div>
-                    <div class="modal-body py-4">
-                        <h3 class="text-danger fw-bold text-center mb-4" style="font-size: 1.75rem;">
-                            Horarios de inscripción por carrera y turno
-                        </h3>
 
-                        <!-- Tabla combinada para ambos turnos -->
-                        <div class="table-responsive mb-4">
-                            <table class="table table-bordered table-hover align-middle">
-                                <thead>
-                                    <tr class="table-primary">
-                                        <th class="w-40">Carrera</th>
-                                        <th class="w-30">Horario Matutino</th>
-                                        <th class="w-30">Horario Vespertino</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="fs-5">
-                                    <tr>
-                                        <td><strong>Arquitectura</strong></td>
-                                        <td>9:00 – 9:30</td>
-                                        <td>15:00 – 15:30</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Relaciones Internacionales</strong></td>
-                                        <td>9:30 – 10:00</td>
-                                        <td>15:30 – 16:00</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Ingeniería en Computación</strong></td>
-                                        <td>10:00 – 11:00</td>
-                                        <td>16:00 – 17:00</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Comunicación y Periodismo</strong></td>
-                                        <td>11:00 – 12:00</td>
-                                        <td>17:00 – 18:00</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <div class="alert alert-warning text-center fs-5 mb-4">
-                            <strong>Revisar los cronogramas para verificar la división de los grupos.</strong>
-                        </div>
-
-                        <hr class="my-4">
-
-                        <!-- Documentos requeridos -->
-                        <div class="mb-3">
-                            <h5 class="text-danger fw-bold mb-3">📄 Documentos necesarios para tu inscripción:</h5>
-                            <div class="table-responsive">
-                                <table class="table table-bordered">
-                                    <thead class="table-light">
-                                        <tr>
-                                            <th class="w-60">Documento</th>
-                                            <th class="w-40">Instrucciones</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="fs-5">
-                                        <tr>
-                                            <td><strong>Carta de asignación firmada</strong></td>
-                                            <td class="text-muted">Marcada como PLANTEL</td>
-                                        </tr>
-                                        <tr>
-                                            <td><strong>Carta Compromiso</strong></td>
-                                            <td class="text-muted">Descarga, llena y firma</td>
-                                        </tr>
-                                        <tr>
-                                            <td><strong>Comprobante de aportación voluntaria</strong></td>
-                                            <td class="text-muted">-</td>
-                                        </tr>
-                                        <tr>
-                                            <td><strong>Identificación oficial</strong></td>
-                                            <td class="text-muted">INE, pasaporte, etc.</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                    <!-- Cuerpo del modal -->
+                    <div class="modal-body py-4 px-4">
+                        <!-- Alerta destacada -->
+                        <div class="alert alert-info border-info border-2 mb-4 text-start" role="alert">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-info-circle-fill me-2 fs-4"></i>
+                                <div>
+                                    <strong class="d-block mb-1">Importante:</strong>
+                                    Para completar tu inscripción debes llenar la
+                                    <b>CÉDULA ÚNICA DE REGISTRO DE ALUMNAS Y ALUMNOS DE NUEVO INGRESO</b>.
+                                </div>
+                            </div>
+                            <div class="mt-2 text-center">
+                                <a href="http://132.248.44.93:9090/CURPI" target="_blank"
+                                    class="btn btn-outline-primary fw-bold">
+                                    <i class="bi bi-box-arrow-up-right me-2"></i>Acceder a Cédula única de registro
+                                </a>
                             </div>
                         </div>
+
+                        <!-- Nota adicional -->
+                        <div class="bg-light rounded p-3 border-start border-4 border-primary">
+                            <i class="bi bi-clock-history text-primary me-2"></i>
+                            <span class="text-muted">
+                                Una vez completada la Cédula, continúa con tus demás trámites según cronograma.
+                            </span>
+                        </div>
                     </div>
 
-                    <div class="modal-footer justify-content-center">
-                        <button id="btnModalUrgente" type="button" class="btn btn-danger px-4 fw-bold"
+                    <!-- Pie del modal -->
+                    <div class="modal-footer justify-content-center bg-light">
+                        <button id="btnModalUrgente" type="button" class="btn btn-danger px-4 fw-bold py-2"
                             data-bs-dismiss="modal" disabled>
-                            Entendido <span id="countdown">(15)</span>
+                            <i class="bi bi-check-circle-fill me-2"></i>Entendido <span id="countdown"
+                                class="ms-1">(15)</span>
                         </button>
                     </div>
                 </div>
@@ -1980,7 +1908,7 @@
                 const modalUrgente = document.getElementById('modalUrgente');
                 const btn = document.getElementById('btnModalUrgente');
                 const countdown = document.getElementById('countdown');
-                let seconds = 15;
+                let seconds = 10;
 
                 if (modalUrgente) {
                     modalUrgente.addEventListener('shown.bs.modal', () => {
@@ -2002,33 +1930,7 @@
             });
         </script>
 
-        <!-- Script para el temporizador -->
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                const modalUrgente = document.getElementById('modalUrgente');
-                const btn = document.getElementById('btnModalUrgente');
-                const countdown = document.getElementById('countdown');
-                let seconds = 15; // Duración actualizada
 
-                if (modalUrgente) {
-                    modalUrgente.addEventListener('shown.bs.modal', () => {
-                        btn.disabled = true;
-                        countdown.textContent = `(${seconds})`;
-
-                        const interval = setInterval(() => {
-                            seconds--;
-                            countdown.textContent = `(${seconds})`;
-
-                            if (seconds <= 0) {
-                                clearInterval(interval);
-                                btn.disabled = false;
-                                countdown.remove();
-                            }
-                        }, 1000);
-                    });
-                }
-            });
-        </script>
 
 
 
