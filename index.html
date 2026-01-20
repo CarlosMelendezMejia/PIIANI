@@ -245,6 +245,14 @@
         .leaflet-tooltip.leaflet-label-tooltip:before {
             border-top-color: rgba(36, 62, 173, 0.95);
         }
+
+        .leaflet-tooltip.leaflet-label-tooltip.leaflet-label-tooltip--green {
+            background: rgba(40, 167, 69, 0.95);
+        }
+
+        .leaflet-tooltip.leaflet-label-tooltip.leaflet-label-tooltip--green:before {
+            border-top-color: rgba(40, 167, 69, 0.95);
+        }
     </style>
 
     <script>
@@ -373,7 +381,7 @@
                         <div class="card-body text-center card-body-shadow">
                             <h4 class="card-title"><strong>REALIZA</strong></h4>
                             <p class="card-text">Cédula Única de Registro <br />de Primer Ingreso</p>
-                            <a class="btnAzul" role="button" data-bs-toggle="modal" data-bs-target="#Curpi">Contestar
+                            <a class="btnAzul hidden" role="button" data-bs-toggle="modal" data-bs-target="#Curpi">Contestar
                                 encuesta</a>
                         </div>
                     </div>
@@ -386,7 +394,7 @@
                         <div class="card-body text-center card-body-shadow">
                             <h4 class="card-title"><strong>TRAMITA</strong></h4>
                             <p class="card-text">Correo electrónico<br />@aragon.unam.mx</p>
-                            <a class="btnAzul" role="button" data-bs-toggle="modal"
+                            <a class="btnAzul hidden" role="button" data-bs-toggle="modal"
                                 data-bs-target="#CorreoAragon">Visitar el sitio</a>
                         </div>
                     </div>
@@ -405,7 +413,7 @@
             <!--Botones carta compromiso y servicios escolares-->
             <div class="row gx-5 gy-2 row-cols-1 row-cols-lg-2 justify-content-center align-items-center">
                 <div class="col text-center align-self-center">
-                    <a href="doc/CARTA_COMPROMISO_GEN_2026-1.pdf" target="_blank">
+                    <a href="doc/CARTA_COMPROMISO_GEN_2026-2.pdf" target="_blank">
                         <div class="btnRojo">
                             <span>
                                 <strong>Descarga carta compromiso</strong>
@@ -494,7 +502,7 @@
                                 requisitos</a>
                         </div>
                         <div class="card-footer text-body-secondary">
-                            <span class="text-rose"><b>Fecha por confirmar</b></span>
+                            <span class="text-rose"><b>26 de Enero</b></span>
                         </div>
                     </div>
                 </div>
@@ -635,15 +643,15 @@
                     <div id="accordion-1" class="accordion" role="tablist">
                         <div class="accordion-item accordion-item-custom hidden">
                             <h2 class="accordion-header" role="tab">
-                                <button class="accordion-button collapsed accordion-btn-custom" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#item-1" aria-expanded="false"
+                                <button class="accordion-button accordion-btn-custom" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#item-1" aria-expanded="true"
                                     aria-controls="item-1">
                                     <strong><span style="color: rgb(255, 255, 255);">División de Ciencias
                                             Sociales</span></strong>
                                 </button>
                             </h2>
-                            <div id="item-1" class="accordion-collapse collapse accordion-collapse-custom"
-                                role="tabpanel" data-bs-parent="#accordion-1">
+                            <div id="item-1" class="accordion-collapse collapse show accordion-collapse-custom"
+                                role="tabpanel">
                                 <div class="accordion-body">
                                     <p>Dar click en la imagen de tu carrera para descargar el cronograma individual</p>
                                     <div
@@ -683,15 +691,15 @@
 
                         <div class="accordion-item accordion-item-custom hidden">
                             <h2 class="accordion-header" role="tab">
-                                <button class="accordion-button collapsed accordion-btn-custom" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#item-2" aria-expanded="false"
+                                <button class="accordion-button accordion-btn-custom" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#item-2" aria-expanded="true"
                                     aria-controls="item-2">
                                     <strong><span style="color: rgb(255, 255, 255);">División de Humanidades y
                                             Artes</span></strong>
                                 </button>
                             </h2>
-                            <div id="item-2" class="accordion-collapse collapse accordion-collapse-custom"
-                                role="tabpanel" data-bs-parent="#accordion-1">
+                            <div id="item-2" class="accordion-collapse collapse show accordion-collapse-custom"
+                                role="tabpanel">
                                 <div class="accordion-body">
                                     <p>Dar click en la imagen de tu carrera para descargar el cronograma individual</p>
                                     <div
@@ -715,15 +723,15 @@
 
                         <div class="accordion-item accordion-item-custom hidden">
                             <h2 class="accordion-header" role="tab">
-                                <button class="accordion-button collapsed accordion-btn-custom" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#item-3" aria-expanded="false"
+                                <button class="accordion-button accordion-btn-custom" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#item-3" aria-expanded="true"
                                     aria-controls="item-3">
                                     <strong><span style="color: rgb(255, 255, 255);">División de Ciencias
                                             Fisico-Matematicas</span></strong>
                                 </button>
                             </h2>
-                            <div id="item-3" class="accordion-collapse collapse accordion-collapse-custom"
-                                role="tabpanel" data-bs-parent="#accordion-1">
+                            <div id="item-3" class="accordion-collapse collapse show accordion-collapse-custom"
+                                role="tabpanel">
                                 <div class="accordion-body">
                                     <p>Dar click en la imagen de tu carrera para descargar el cronograma individual</p>
                                     <div
@@ -756,15 +764,15 @@
 
                         <div class="accordion-item accordion-item-custom">
                             <h2 class="accordion-header" role="tab">
-                                <button class="accordion-button collapsed accordion-btn-custom" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#item-4" aria-expanded="false"
+                                <button class="accordion-button accordion-btn-custom" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#item-4" aria-expanded="true"
                                     aria-controls="item-4">
                                     <strong><span style="color: rgb(255, 255, 255);">División del Sistema Universidad
                                             Abierta y Educación a Distancia</span></strong>
                                 </button>
                             </h2>
-                            <div id="item-4" class="accordion-collapse collapse accordion-collapse-custom"
-                                role="tabpanel" data-bs-parent="#accordion-1">
+                            <div id="item-4" class="accordion-collapse collapse show accordion-collapse-custom"
+                                role="tabpanel">
                                 <div class="accordion-body">
                                     <p>Dar click en la imagen de tu carrera para descargar el cronograma individual</p>
                                     <div
@@ -915,7 +923,7 @@
                                                 data-bs-toggle="modal" data-bs-target="#CartaPlantel"
                                                 style="color: #1773fc;text-decoration: underline; ">PLANTEL</a></b>)
                                     </li>
-                                    <li>Carta Compromiso (<b><a href="doc/CARTA_COMPROMISO_GEN_2026-1.pdf"
+                                    <li>Carta Compromiso (<b><a href="doc/CARTA_COMPROMISO_GEN_2026-2.pdf"
                                                 target="_blank"
                                                 style="color: #1773fc;text-decoration: underline; ">descarga</a></b>,
                                         llena y firma)</li>
@@ -2101,8 +2109,8 @@
                 { lat: 19.475557490862624, lng: -99.04589351131486, name: 'Edificio de Gobierno' },
 
                 // Entradas (marcadores verdes)
-                { lat: 19.477113741945363, lng: -99.04455807471379, name: 'Entrada Av. Universidad', icon: greenIcon },
-                { lat: 19.476321589902124, lng: -99.04686134401935, name: 'Entrada Bosque de Africa', icon: greenIcon }
+                { lat: 19.477113741945363, lng: -99.04455807471379, name: 'Entrada Av. Universidad', icon: greenIcon, tooltipClass: 'leaflet-label-tooltip--green' },
+                { lat: 19.476321589902124, lng: -99.04686134401935, name: 'Entrada Bosque de Africa', icon: greenIcon, tooltipClass: 'leaflet-label-tooltip--green' }
             ];
 
             const markersGroup = L.featureGroup().addTo(map);
@@ -2114,7 +2122,7 @@
                     permanent: true,
                     direction: 'top',
                     offset: [0, -10],
-                    className: 'leaflet-label-tooltip'
+                    className: `leaflet-label-tooltip ${loc.tooltipClass ?? ''}`.trim()
                 });
             });
 
