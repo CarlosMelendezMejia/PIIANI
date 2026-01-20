@@ -178,6 +178,11 @@
                 0 0 16px 4px rgba(238, 29, 82, 0.6);
         }
 
+        /* Utilidad para ocultar elementos sin borrar su código */
+        .hidden {
+            display: none !important;
+        }
+
         .qr-container {
             max-width: 200px;
             margin: 0 auto;
@@ -229,7 +234,7 @@
         }
 
         document.addEventListener('DOMContentLoaded', () => {
-            const modalUrgenteId = 'modalUrgente';
+            const modalUrgenteId = 'AvisoInicio';
             const modalUrgente = document.getElementById(modalUrgenteId);
 
             if (modalUrgente) {
@@ -248,9 +253,6 @@
             }
         });
     </script>
-
-
-
 </head>
 
 <body>
@@ -297,7 +299,7 @@
                                     ¡LA FES ARAGÓN TE DA LA BIENVENIDA!
                                 </h2>
                                 <h3 class="welcome-subheading">
-                                    Generación 2026-I | SISTEMA PRESENCIAL Y SUAYED
+                                    Generación 2026-II | SUAYED
                                 </h3>
                             </div>
                         </div>
@@ -343,7 +345,7 @@
                             src="img/img_curpi.jpg" />
                         <div class="card-body text-center card-body-shadow">
                             <h4 class="card-title"><strong>REALIZA</strong></h4>
-                            <p class="card-text">Cédula Única de Registro <br />de Nuevo Ingreso</p>
+                            <p class="card-text">Cédula Única de Registro <br />de Primer Ingreso</p>
                             <a class="btnAzul" role="button" data-bs-toggle="modal" data-bs-target="#Curpi">Contestar
                                 encuesta</a>
                         </div>
@@ -436,11 +438,11 @@
                             <h5 class="card-title">EXAMEN DIAGNÓSTICO</h5>
                             <p class="card-text">Realiza el examen diagnóstico de conocimientos, español e inglés
                             </p>
-                            <a class="btnAzul" role="button" data-bs-toggle="modal"
+                            <a class="btnAzul hidden" role="button" data-bs-toggle="modal"
                                 data-bs-target="#ExamenDiagnostico">Realizar examen</a>
                         </div>
                         <div class="card-footer text-body-secondary">
-                            <span class="text-rose"><b>4 de Agosto al 5 de Septiembre</b></span>
+                            <span class="text-rose"><b>26 de Enero a 28 de Febrero</b></span>
                         </div>
                     </div>
                 </div>
@@ -460,12 +462,12 @@
                           -->
                             </p>
 
-                            <a class="btnAzul" role="button" data-bs-toggle="modal" data-bs-target="#EMADistancia">Ver
+                            <a class="btnAzul hidden" role="button" data-bs-toggle="modal"
+                                data-bs-target="#EMADistancia">Ver
                                 requisitos</a>
                         </div>
                         <div class="card-footer text-body-secondary">
-                            <span class="text-rose"><b>Justo después del tramite de inscripción (Consulta
-                                    cronogramas)</b></span>
+                            <span class="text-rose"><b>Fecha por confirmar</b></span>
                         </div>
                     </div>
                 </div>
@@ -483,7 +485,7 @@
                                 TICómetro</a>
                         </div>
                         <div class="card-footer text-body-secondary">
-                            <span class="text-rose"><b>7 de Agosto al 12 de Septiembre</b></span>
+                            <span class="text-rose"><b>29 de Enero al 28 de Febrero</b></span>
                         </div>
                     </div>
                 </div>
@@ -516,7 +518,7 @@
                             <h5 class="card-title">PLÁTICA CON LA DIRECTORA</h5>
                         </div>
                         <div class="card-footer text-body-secondary">
-                            <span class="text-rose"><b>De la semana del 11 al 15 de Agosto </b></span>
+                            <span class="text-rose"><b>Fecha por confirmar</b></span>
                         </div>
                     </div>
                 </div>
@@ -604,9 +606,7 @@
                     </div>
 
                     <div id="accordion-1" class="accordion" role="tablist">
-
-
-                        <div class="accordion-item accordion-item-custom">
+                        <div class="accordion-item accordion-item-custom hidden">
                             <h2 class="accordion-header" role="tab">
                                 <button class="accordion-button collapsed accordion-btn-custom" type="button"
                                     data-bs-toggle="collapse" data-bs-target="#item-1" aria-expanded="false"
@@ -654,7 +654,7 @@
                             </div>
                         </div>
 
-                        <div class="accordion-item accordion-item-custom">
+                        <div class="accordion-item accordion-item-custom hidden">
                             <h2 class="accordion-header" role="tab">
                                 <button class="accordion-button collapsed accordion-btn-custom" type="button"
                                     data-bs-toggle="collapse" data-bs-target="#item-2" aria-expanded="false"
@@ -686,8 +686,7 @@
                             </div>
                         </div>
 
-
-                        <div class="accordion-item accordion-item-custom">
+                        <div class="accordion-item accordion-item-custom hidden">
                             <h2 class="accordion-header" role="tab">
                                 <button class="accordion-button collapsed accordion-btn-custom" type="button"
                                     data-bs-toggle="collapse" data-bs-target="#item-3" aria-expanded="false"
@@ -743,16 +742,16 @@
                                     <p>Dar click en la imagen de tu carrera para descargar el cronograma individual</p>
                                     <div
                                         class="row gx-0 gy-0 row-cols-1 row-cols-md-2 row-cols-lg-3 justify-content-center">
-                                        <div class="col colHover"><a href="doc/CRONOGRAMAS 20261/SUADER.pdf"
-                                                target="_blank"><img
+                                        <div class="col colHover objeto-no-disponible"><a
+                                                href="doc/CRONOGRAMAS 20261/SUADER.pdf" target="_blank"><img
                                                     src="img/Imagotipos SVG/SUAyED/Derecho SUAyED negro-02.svg"
                                                     width="250" /></a></div>
-                                        <div class="col colHover"><a href="doc/CRONOGRAMAS 20261/SUAECO.pdf"
-                                                target="_blank"><img
+                                        <div class="col colHover objeto-no-disponible"><a
+                                                href="doc/CRONOGRAMAS 20261/SUAECO.pdf" target="_blank"><img
                                                     src="img/Imagotipos SVG/SUAyED/Economía SUAyED negro-02.svg"
                                                     width="250" /></a></div>
-                                        <div class="col colHover"><a href="doc/CRONOGRAMAS 20261/SUARRII.pdf"
-                                                target="_blank"><img
+                                        <div class="col colHover objeto-no-disponible"><a
+                                                href="doc/CRONOGRAMAS 20261/SUARRII.pdf" target="_blank"><img
                                                     src="img/Imagotipos SVG/SUAyED/R I  SUAyED negro-02.svg"
                                                     width="250" /></a></div>
                                     </div>
@@ -940,7 +939,7 @@
                     <div class="modal-header">
                         <h6 class="modal-title">
                             <strong><span style="color: rgb(9, 64, 119);">
-                                    CÉDULA ÚNICA DE REGISTRO PARA ALUMNAS Y ALUMNOS DE NUEVO INGRESO
+                                    CÉDULA ÚNICA DE REGISTRO DE PRIMER INGRESO
                                 </span></strong>
                         </h6>
                         <button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
@@ -953,7 +952,7 @@
                             <div class="col-8">
                                 <h5 style="font-size: 20px;">
                                     FACULTAD DE ESTUDIOS SUPERIORES ARAGÓN<br><br><br>
-                                    CÉDULA ÚNICA DE REGISTRO DE ALUMNAS Y ALUMNOS DE NUEVO INGRESO
+                                    CÉDULA ÚNICA DE REGISTRO DE PRIMER INGRESO
                                 </h5>
                             </div>
                             <div class="col-2">
@@ -1028,7 +1027,7 @@
                                 <p class="text-start text-rose">Para verificar que el formulario fue
                                     llenado, puede volver a
                                     ingresar con el correo y contraseña y si nuevamente lo redirige al mensaje de éxito,
-                                    significa que todo esta correcto</p>
+                                    significa que todo esta correcto</p>
 
                                 <p class="mt-4 text-start"><b>Preguntas frecuentes:</b></p>
 
@@ -1058,7 +1057,7 @@
                                     </div>
                                 </div>
 
-                                <p class="mt-4"><strong>Gracias y bienvenida(o)s al semestre 2026 - 1</strong></p>
+                                <p class="mt-4"><strong>Gracias y bienvenida(o)s al semestre 2026-II</strong></p>
                             </div>
                         </div>
                     </div>
@@ -1770,7 +1769,7 @@
                         <!-- Título -->
                         <h3 class="modal-title mx-auto"
                             style="font-weight: 700; font-size: 1.8rem; text-align: center; padding: 0 80px;">
-                            ¡Bienvenidos Generación 2026-1!
+                            ¡Bienvenidos Generación 2026-II!
                         </h3>
 
                         <!-- Logo FES -->
@@ -1870,7 +1869,7 @@
                                 <div>
                                     <strong class="d-block mb-1">Importante:</strong>
                                     Para completar tu inscripción debes llenar la
-                                    <b>CÉDULA ÚNICA DE REGISTRO DE ALUMNAS Y ALUMNOS DE NUEVO INGRESO</b>.
+                                    <b>CÉDULA ÚNICA DE REGISTRO DE PRIMER INGRESO</b>.
                                 </div>
                             </div>
                             <div class="mt-2 text-center">
