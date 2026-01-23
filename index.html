@@ -189,6 +189,7 @@
             margin: 0 auto;
         }
 
+
         .qr-container img {
             width: 100%;
             height: auto;
@@ -269,7 +270,8 @@
         }
 
         document.addEventListener('DOMContentLoaded', () => {
-            const modalUrgenteId = 'AvisoInicio';
+            // const modalUrgenteId = 'AvisoInicio';
+            const modalUrgenteId = 'modalUrgente';
             const modalUrgente = document.getElementById(modalUrgenteId);
 
             if (modalUrgente) {
@@ -292,6 +294,7 @@
 
 <body>
     <main>
+        
         <!--Container-->
         <div class="container main-section">
             <!--Encabezado-->
@@ -381,7 +384,7 @@
                         <div class="card-body text-center card-body-shadow">
                             <h4 class="card-title"><strong>REALIZA</strong></h4>
                             <p class="card-text">Cédula Única de Registro <br />de Primer Ingreso</p>
-                            <a class="btnAzul hidden" role="button" data-bs-toggle="modal" data-bs-target="#Curpi">Contestar
+                            <a class="btnAzul" role="button" data-bs-toggle="modal" data-bs-target="#Curpi">Contestar
                                 encuesta</a>
                         </div>
                     </div>
@@ -1899,6 +1902,16 @@
                     <!-- Cuerpo del modal -->
                     <div class="modal-body py-4 px-4">
                         <!-- Alerta destacada -->
+                        <!-- Aviso SUA -->
+                        <div class="alert alert-warning border-warning border-2 mb-4 text-start" role="alert">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-exclamation-circle-fill me-2 fs-4"></i>
+                                <div>
+                                    <strong class="d-block mb-1">Aviso importante a la comunidad de nuevo ingreso Sistema de Universidad Abierta y Educación a Distancia</strong>
+                                    Se informa a la comunidad de nuevo ingreso del Sistema de Universidad Abierta y Educación a Distancia (SUAyED) de la Facultad de Estudios Superiores Aragón que el proceso de inscripciones se llevará a cabo el día: <br><br><b>26 de agosto de 2026</b>.
+                                </div>
+                            </div>
+                        </div>
                         <div class="alert alert-info border-info border-2 mb-4 text-start" role="alert">
                             <div class="d-flex align-items-center">
                                 <i class="bi bi-info-circle-fill me-2 fs-4"></i>
@@ -1915,7 +1928,6 @@
                                 </a>
                             </div>
                         </div>
-
                         <!-- Nota adicional -->
                         <div class="bg-light rounded p-3 border-start border-4 border-primary">
                             <i class="bi bi-clock-history text-primary me-2"></i>
